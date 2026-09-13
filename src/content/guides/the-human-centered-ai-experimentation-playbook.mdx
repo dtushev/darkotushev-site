@@ -1,0 +1,636 @@
+---
+title: The Human-Centered AI Experimentation Playbook
+description: >-
+  A practical guide to useful experiments, credible evidence, and decisions
+  grounded in the human experience.
+---
+## **How to use this guide**
+
+For product, innovation, customer experience, and business teams. Follow the worked example from problem discovery to a pilot decision, then use the four worksheets to plan your own experiment.&#x20;
+
+1\. A pilot should earn a decision
+
+2\. Learn from research without borrowing its results
+
+3\. Find the problem behind the AI request
+
+4\. Choose an opportunity you can actually learn from
+
+5\. Convert the idea into a testable hypothesis
+
+6\. Design the smallest useful experience
+
+7\. Design for confidence, choice, and recovery
+
+8\. Prepare the data, partners, and ownership
+
+9\. Evaluate the system before exposing customers
+
+10\. Choose measures that describe the whole experience
+
+11\. Make the comparison trustworthy
+
+12\. Run a six-week learning cycle
+
+13\. Operate the pilot as a real service
+
+14\. Work through Northline’s evidence
+
+15\. Build economics that survive real operation
+
+16\. Decide whether to stop, revise, validate, or expand
+
+17\. Transfer the work into everyday operations
+
+18\. Build a learning practice that compounds
+
+Worksheet A. The experiment brief
+
+Worksheet B. The measurement contract
+
+Worksheet C. Readiness and operating plan
+
+Worksheet D. Decision and handoff record
+
+Sources and editorial notes
+
+Read Chapters 10–16 together before interpreting pilot results. All Northline scenarios, thresholds, and calculations are illustrative. External research is cited separately; no employer or vendor results are claimed.
+
+## 1. A pilot should earn a decision
+
+The most useful question at the beginning of an AI project is simple: whose experience should improve, and what would count as improvement? A demonstration can show that a system produces an impressive answer. A pilot must show whether the proposed experience helps people under the conditions in which it will actually operate.
+
+Human-centered experimentation begins with the person doing the work or making the decision. A shopper wants to choose a product with less uncertainty. A service specialist wants to resolve a problem without searching five systems. A merchandiser wants a reliable first draft without spending more time correcting it than writing it. The technology matters because of the change it makes in that person’s task.
+
+This playbook provides a practical way to move from an idea to a bounded experiment and then to an evidence-based decision. The six-week schedule is an example of a learning cycle, not a promise that every organization can finish procurement, integration, statistical validation, and production readiness in six weeks. Some questions can be answered quickly. Others require more traffic, a longer observation window, or a different method.
+
+### Distinguish the stages
+
+| **Stage**          | **Main question**                                         | **Appropriate evidence**                                                    |
+| ------------------ | --------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Demonstration      | Can we illustrate the concept?                            | A working example with stated limitations.                                  |
+| Feasibility test   | Can it work within our constraints?                       | Data, integration, quality, and operating checks.                           |
+| Pilot              | Does a bounded real experience justify the next decision? | User behavior, quality, cost, and comparison evidence.                      |
+| Production rollout | Can we operate this reliably at the intended scale?       | Accepted ownership, service capacity, monitoring, and controlled expansion. |
+
+Confusion between these stages creates pressure to overclaim. A team may show a polished conversation and be asked for a revenue forecast. Another may complete a small pilot and assume that it has proven performance across every category. Name the stage and the question before discussing results.
+
+### Follow one example throughout
+
+The recurring example is Northline, a fictional clothing retailer testing a fit-explanation assistant for a limited set of women’s jeans. The assistant explains verified product measurements, fabric characteristics, and fit descriptions. It does not predict a person’s body measurements, guarantee fit, change prices, or place orders. A shopper named Maya uses it to understand how two styles differ.
+
+Northline’s data, thresholds, costs, messages, and results are invented for instruction. They are not employer results, vendor benchmarks, or promises of performance. Use the example to understand the reasoning, then replace its assumptions with your own evidence.
+
+The pilot’s deliverable is a decision with a reason: stop, revise, run a stronger validation, or expand within defined limits. A positive decision and a useful negative decision can both represent good work.
+
+## 2. Learn from research without borrowing its results
+
+Research demonstrates why local testing matters. In the November 2024 revision of “Generative AI at Work,” Erik Brynjolfsson, Danielle Li, and Lindsey Raymond study the staggered introduction of an assistant using data from 5,172 customer support agents. They report a 15% average increase in issues resolved per hour, with meaningful differences by worker experience and skill. That is evidence about a particular assisted service setting, not a transferable productivity guarantee. \[1]
+
+METR’s July 2025 randomized study provides a different example. Sixteen experienced open-source developers worked on 246 issues in familiar repositories; allowing early-2025 AI tools increased completion time by 19%. The study concerns those tools, participants, and tasks. It does not establish that AI slows all software development. \[2]
+
+The date matters. In February 2026, METR reported that a follow-up study had serious selection and time-measurement problems and was an unreliable signal of the current effect. The researchers described changing the study design. This update is a reminder that both the technology and the population willing to participate can change. \[3]
+
+### What these findings mean for your pilot
+
+The practical inference is to measure the whole task in your setting. A faster draft can still produce a slower completed assignment if checking and correction take too long. A helpful answer for an inexperienced employee may add little for an expert. A user’s impression of speed is valuable feedback, but it should be compared with observed time and output quality.
+
+Avoid selecting the most favorable published percentage and multiplying it by your organization’s workload. A forecast should explain which tasks are eligible, how often the system is used, what quality level is required, and what additional review remains. The resulting estimate should be a range with assumptions that can be replaced during the pilot.
+
+### Keep an evidence ladder
+
+An interview reveals needs and language. A usability session reveals where a design confuses people. An offline evaluation reveals how a system handles selected cases. A controlled field experiment can estimate an effect in the population studied. None of these methods answers every question on its own.
+
+Combine them deliberately. Northline interviews shoppers to understand fit uncertainty, tests explanations against approved product data, watches participants use a prototype, and then measures a limited live experience. The team does not call an interview a conversion test or treat a model score as proof of customer satisfaction.
+
+For every important claim, ask: what was observed, in which population, with which version, and over what period? Then state how far the evidence reasonably travels.
+
+## 3. Find the problem behind the AI request
+
+Many projects begin with a proposed solution: “We need a shopping assistant,” “We should automate this report,” or “Can AI answer these tickets?” Treat that request as the opening of discovery. Ask what people struggle to do today, why the existing experience falls short, and what would happen if the problem stayed unsolved.
+
+A useful problem statement identifies the person, situation, obstacle, and consequence. “Customers need AI sizing” is too broad. “Shoppers comparing two jean styles cannot tell whether the difference is leg shape, rise, or stretch, so they leave the page or buy several sizes to resolve the uncertainty at home” is specific enough to investigate. It still contains assumptions that need evidence.
+
+### Observe the current task
+
+Review actual customer questions, search terms, service contacts, and return reasons that you are authorized to use. Watch people attempt the task with the current experience. Ask them to describe what they are trying to decide and which information they trust. Avoid leading questions such as “Would an AI assistant make this easier?”
+
+For Northline, a researcher might ask a participant to choose between two styles for a preferred silhouette. The useful observation is where the person gets stuck: unfamiliar terminology, missing garment dimensions, inconsistent photography, or uncertainty about stretch. Different causes point to different interventions. An assistant cannot explain a measurement the business has never collected.
+
+### Separate symptoms from causes
+
+A high contact volume is a symptom. The cause could be unclear information, a broken process, or an unavailable service. AI may help summarize a policy, but a shorter policy page could solve the problem with less complexity. Include that simpler alternative in the opportunity review.
+
+Talk with the employees who handle the consequence. A service specialist may know that “Which size should I get?” often means “Will this fabric stretch after wearing?” A product specialist may know that measurements differ across variants. Those observations help define the actual knowledge the proposed experience would need.
+
+### Write a baseline before proposing a target
+
+Record current task completion, effort, time, error patterns, or relevant commercial behavior using an explicit definition. If no trustworthy measure exists, say so and make baseline collection part of the preparation. An invented baseline creates false precision that later decisions cannot repair.
+
+Finish discovery with a short statement: who has the problem, evidence that it occurs, its practical consequence, the suspected cause, and what remains unknown. That statement should make sense to someone who has never seen the vendor demo. It becomes the anchor for scope decisions when new features start arriving.
+
+## 4. Choose an opportunity you can actually learn from
+
+The most valuable business problem is not always the best first pilot. A broad opportunity may depend on unavailable data, several teams, or a long purchase cycle. A narrower problem may let the organization learn something important with a manageable investment. Select for customer value and learnability together.
+
+Use a small set of comparison dimensions rather than an elaborate scoring model. Consider the severity and frequency of the customer problem, the accessibility of necessary data, the ability to observe an outcome, the consequence of an error, the effort to integrate, and the availability of an owner. A score should start a discussion, not replace judgment.
+
+### Compare plausible alternatives
+
+Northline considers three ideas: explaining fit terminology, recommending an exact size from a photo, and automatically exchanging an unsuitable item. All relate to fit, but they carry different data needs and consequences. The explanation assistant can begin with approved product facts and no transaction authority. The other concepts need different validation and controls.
+
+| **Opportunity**              | **Main uncertainty**                                               | **Sensible first test**                                      |
+| ---------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ |
+| Explain verified fit details | Do explanations help shoppers compare styles?                      | Prototype comprehension and factual-accuracy testing.        |
+| Recommend a personal size    | Can the recommendation be validated for the intended population?   | Dedicated fit-validation study before broad customer claims. |
+| Execute an exchange          | Can policy, inventory, consent, and payment actions stay reliable? | Transaction simulation and operational testing.              |
+
+The explanation pilot does not prove the size recommender or the exchange agent. It may create reusable knowledge about product data and customer language, but each later capability changes the question being tested.
+
+### Apply hard constraints before ranking
+
+If the team cannot access the required data through an authorized route, cannot recover from an error, or has no receiving owner, resolve that dependency before inviting customers. A high potential-value score should not conceal an unavailable prerequisite. Some opportunities belong in preparation rather than the active pilot queue.
+
+Write down why the selected idea beat the alternatives. Include the simpler non-AI option. Northline may decide that a better comparison table should be the control experience for a later test, because comparing AI only with a neglected page could overstate its incremental value.
+
+### Set the next decision, not the ultimate ambition
+
+The immediate decision might be whether to fund a larger validation or whether to integrate a vendor into a limited category. It need not be “deploy everywhere.” A focused decision helps the team choose the minimum evidence it needs and prevents a small pilot from becoming responsible for proving the entire AI strategy.
+
+### 5. Convert the idea into a testable hypothesis
+
+A hypothesis connects an intervention to an expected change through a plausible mechanism. It should say what will change, for whom, compared with what, and why. “Customers will like it” is too vague. “A verified fit explanation will help eligible shoppers distinguish rise, leg shape, and stretch more accurately than the current page” describes something the team can observe.
+
+Separate the mechanism from the business outcome. Better understanding may improve purchases, reduce unsuitable purchases, or help someone decide not to buy. These outcomes are not interchangeable. A human-centered pilot should not treat every declined purchase as a failure when the product would have been a poor match.
+
+### Create a chain of assumptions
+
+Northline’s proposed chain is: relevant facts are available; the assistant retrieves the correct facts; the explanation is understandable; shoppers use it when needed; it improves a decision; and the value exceeds the cost. The weakest link may appear before conversion. If half the eligible products lack usable measurements, there is no reason to wait for a revenue dashboard to discover the problem.
+
+Define how each critical assumption will be checked. Product audits test factual coverage. Offline questions test accuracy. Usability sessions test comprehension and correction. Field measures test adoption and commercial behavior. Cost records test whether the experience is supportable.
+
+### Agree on success and failure before launch
+
+Choose a primary business outcome for the commercial question, a small set of diagnostic measures, and boundaries that protect quality and the customer experience. For a feasibility pilot, success may mean that the system operates reliably enough to justify a larger experiment. That is a different claim from statistically establishing a commercial lift.
+
+Northline writes its initial decision as: “Determine whether a limited fit-explanation experience is accurate, usable, and supportable enough to justify a properly powered commercial validation.” Purchase conversion is measured, but the planned small field sample is explicitly insufficient to reliably detect the modest lift the business would ultimately care about.
+
+Hypothesis template: For \[eligible people and context], offering \[specific intervention] instead of \[comparison] should improve \[defined outcome] because \[mechanism], while keeping \[quality and customer protections] within \[pre-agreed limits].
+
+Include what would change your mind. If shoppers misunderstand an explanation more confidently, if the assistant creates extra work, or if the required review makes the economics unattractive, the team should revise or stop. Defining those possibilities is part of honest experimentation.
+
+## 6. Design the smallest useful experience
+
+Small scope should preserve the core customer task. A pilot that removes all difficult cases may be easy to operate but teach little about the intended service. The aim is to select a meaningful slice with clear boundaries, not to construct an artificial environment in which the system cannot fail.
+
+Northline starts with one market, one language, one product category, and 40 styles with approved fit information. The assistant explains those styles and compares two selected products. It does not infer body characteristics, browse unrelated products, apply discounts, or add items to a cart. The existing product page remains available throughout.
+
+### Specify what happens outside scope
+
+An unsupported question is part of the experience. If Maya asks whether a style will fit her exact body shape, the assistant should explain what it can establish from the product information and offer a relevant human or standard-help route. It should not fill the gap with a confident personal prediction.
+
+State exclusions in operational terms. “No sensitive data” is incomplete if the interface invites customers to upload photos or describe medical circumstances. For this pilot, Northline provides no upload control and asks only for the product and the fit feature the shopper wants explained. Free text can still contain unexpected information, so handling and retention rules are required.
+
+### Keep the comparison interpretable
+
+Do not launch a new assistant, a redesigned page, a promotion, and a new shipping offer as one experiment if you need to understand the assistant’s contribution. A bundled change can answer whether the bundle works, but it cannot identify which component caused the result. Name the intervention accurately.
+
+A prototype can use manual support behind the scenes when the learning question concerns the experience. Record that manual work and explain the setup to participants where relevant. Do not present a staffed demonstration as evidence that an autonomous system is ready. Hidden labor becomes an expensive surprise at scale.
+
+### Maintain a scope-change log
+
+During preparation, change scope as you learn. During the measurement period, treat a material change as a new version with its own interpretation. Adding another category or a new data source may alter accuracy and behavior. If versions are pooled without explanation, the final average can describe a product that nobody actually used.
+
+Complete the scope statement with eligibility, supported actions, excluded actions, fallback, owner, and exit conditions. A colleague should be able to read it and decide whether a specific case belongs in the pilot without asking the project lead.
+
+## 7. Design for confidence, choice, and recovery
+
+People do not need to understand the model architecture to use an AI experience well. They do need to understand what the assistant can help with, what information it is using, and how to recover when it misunderstands. These are product decisions that should be tested before broad exposure.
+
+Introduce the assistant through the task: “Ask about the fit, rise, or stretch of these jeans.” Explain that the answer uses product information and does not guarantee personal fit. Keep that explanation brief and close to the interaction. A long disclosure hidden in a policy page will not help Maya interpret an answer at the moment of choice.
+
+### Make uncertainty useful
+
+Suppose a style has a verified rise measurement but no approved statement about how much the fabric relaxes with wear. The assistant can explain the rise and say that the second detail is unavailable. It can point to supported care information or a specialist. “I don’t have that measurement” is more useful than an invented estimate disguised as helpfulness.
+
+Show the relevant source in a readable form: a product fact, measurement, or approved explanation. A source link is not proof by itself; the answer must actually agree with it. Test whether customers can distinguish a factual specification from general styling guidance and a personal recommendation.
+
+### Preserve control
+
+Let people correct the product or question, dismiss the assistant, and return to the standard experience without losing their place. Do not require a conversation to access information that was previously available. Avoid repeated invitations after a user declines help. Adoption gained through obstruction is not evidence of value.
+
+Recovery deserves a designed path. A failed response should preserve the question when appropriate, explain what happened, and provide an alternative. A handoff should carry relevant context rather than asking the customer to begin again. If human support has limited hours, say what service is actually available.
+
+### Test with different needs
+
+Include mobile users, people unfamiliar with the terminology, and users with different accessibility needs. Check keyboard operation, screen-reader announcements, readable contrast, and whether an answer remains usable when zoomed. Ask participants to complete realistic tasks rather than rating a polished screen.
+
+Watch for false confidence. A participant who repeats the assistant’s answer enthusiastically but cannot identify the product difference has not necessarily learned anything. Ask them to explain the decision in their own words. Comprehension, appropriate reliance, and ease of recovery are stronger signals than novelty alone.
+
+## 8. Prepare the data, partners, and ownership
+
+An AI pilot is often limited by the information and operating agreements around it. Before connecting a model, identify the records needed, their source, their owner, and how they are updated. A product measurement without a variant reference can produce a plausible answer about the wrong item. A stale policy can be retrieved perfectly and still mislead the customer.
+
+Northline creates a small approved product set with style and variant identifiers, measurement units, fit descriptions, fabric facts, source references, and review dates. Missing values remain missing. The team defines what happens when a product changes or leaves the eligible catalog. It tests the full path from source update to displayed answer.
+
+### Ask vendors questions tied to the pilot
+
+Request a demonstration using your authorized test cases, including missing information and service failures. Ask how model changes are communicated, what can be versioned, what logs are available, and how the service is disabled. Clarify data retention, access, subprocessors, permitted use, export, deletion, and support responsibilities through the organization’s applicable review process.
+
+Do not treat “we use enterprise AI” as an answer to every data question. Trace what is sent, where it goes, who can access it, and what the agreement permits. Likewise, a low quoted usage price may exclude integration, evaluation, support, or minimum commitments. The cost model needs the actual terms relevant to the trial.
+
+### Bring the receiving team in early
+
+Name the business owner, technical owner, measurement lead, user-research partner, frontline contact, and decision maker. In a small organization one person may hold several roles, but the responsibilities still need to be explicit. Identify which existing privacy, security, legal, sourcing, and accessibility reviews apply to the actual data and actions.
+
+NIST’s AI Risk Management Framework is voluntary guidance for incorporating trustworthiness into AI design, use, and evaluation. Its core uses Govern, Map, Measure, and Manage. These functions provide a useful organizing reference for ownership, context, evaluation, and response; they are not a certificate that a pilot is safe or compliant. \[4, 5]
+
+### Create a short dependency record
+
+For each dependency, record the needed decision or deliverable, owner, due date, and consequence of delay. A missing product-data approval may block the live experience while still allowing synthetic testing. A missing production owner may allow learning but block expansion. Different dependencies should produce different decisions rather than one ambiguous “not ready” status.
+
+## 9. Evaluate the system before exposing customers
+
+Offline evaluation asks whether the system behaves acceptably on a defined collection of cases before it reaches real users. It does not replace a field pilot. It reduces avoidable failures and reveals whether the data, instructions, and retrieval process support the intended experience.
+
+Build cases from authorized customer questions, product knowledge, and foreseeable failure modes. Include ordinary questions, ambiguous wording, missing facts, conflicting records, unsupported requests, and attempts to make the assistant ignore its limits. Keep realistic frequency separate from challenge testing: a deliberately difficult test set is useful, but its error rate is not an estimate of live prevalence.
+
+### Define what a good answer means
+
+A rubric should evaluate observable behavior. For Northline, the answer must identify the correct product, match approved facts, avoid unsupported personal-fit claims, explain relevant limitations, and provide a usable next step. Tone matters, but a warm answer with the wrong inseam fails the task.
+
+| **Evaluation dimension** | **Passing behavior**                             | **Failure example**                                      |
+| ------------------------ | ------------------------------------------------ | -------------------------------------------------------- |
+| Product identity         | Uses the selected style and variant.             | Gives measurements for a different length.               |
+| Factual grounding        | Claims agree with approved records.              | Invents fabric stretch or a missing measurement.         |
+| Scope                    | Explains supported facts and limits.             | Guarantees fit from a brief description.                 |
+| Recovery                 | Preserves progress and offers a supported route. | Repeats an error with no alternative.                    |
+| Clarity                  | Uses understandable terms and units.             | Mixes garment and body measurements without explanation. |
+
+Use severity as well as counts. A wording issue and an unauthorized transaction are not equivalent failures. Define critical categories that block release until resolved. A high average score must not cancel out a small number of unacceptable behaviors.
+
+### Separate development from final checking
+
+Use one set of cases to improve the system and another reserved set to check the revised version. If the team repeatedly tunes to the same examples, the score can rise without broader improvement. Keep the test cases, expected evidence, version, and reviewer decisions together so later changes can be compared.
+
+Have reviewers calibrate on a shared subset. Resolve disagreements by clarifying the rubric, not by quietly averaging incompatible judgments. A model can help organize or flag answers, but it should not be the sole judge of its own factual correctness. Review the underlying source for consequential claims.
+
+Repeat selected cases to examine inconsistent behavior. Passing one run is weaker evidence than reliable behavior across realistic variations. Record which model, prompt, source snapshot, and configuration produced the result; an unrecorded change can invalidate the relevance of yesterday’s passing score.
+
+## 10. Choose measures that describe the whole experience
+
+Metrics should follow the hypothesis. Choose one primary commercial outcome for the commercial question, a few measures that explain the mechanism, and explicit quality or customer protections. A dashboard with dozens of attractive numbers makes it easy to select whichever moved in the desired direction.
+
+For Northline’s limited field pilot, purchase conversion is defined as assigned eligible visitors with a completed purchase within a fixed seven-day window divided by assigned eligible visitors. The visitor identifier, eligibility rule, attribution window, and treatment persistence must be specified. The pilot estimates this outcome; it does not promise enough precision to validate a small lift.
+
+### Separate assignment, exposure, and use
+
+Assignment means a visitor was placed in a group. Exposure means the feature rendered under the defined conditions. Use means the person interacted with it. These denominators answer different questions. Comparing assistant users with everyone else is biased because the decision to use the assistant may be related to purchase intent or uncertainty.
+
+For the primary randomized comparison, analyze eligible visitors according to their assigned group under the pre-agreed plan, including assigned visitors who never open the assistant. Use exposure and interaction measures to diagnose the experience. Do not remove nonusers simply to produce a larger apparent effect.
+
+| **Measure**                          | **What it helps explain**                       | **Important caution**                                   |
+| ------------------------------------ | ----------------------------------------------- | ------------------------------------------------------- |
+| Eligible-visitor purchase conversion | Commercial outcome of offering the experience.  | Keep assignment and follow-up consistent.               |
+| Assistant opening rate               | Whether eligible visitors notice and choose it. | High use can reflect confusion as well as value.        |
+| Audited answer pass rate             | Quality of sampled responses.                   | State sampling method, rubric, and sample size.         |
+| Helpfulness responses                | What responding users report.                   | Nonrespondents may have different experiences.          |
+| Error and fallback rate              | Operational reliability.                        | Include failures that prevent an answer from appearing. |
+| Mature return outcomes               | Whether later purchases remain suitable.        | Wait for delivery and the relevant return window.       |
+
+### Define protections before launch
+
+Examples include no unresolved critical data exposure, no unsupported fit guarantees in the release evaluation, an acceptable error rate, and a usable fallback. Thresholds require local judgment and an owner. Distinguish an immediate stop trigger from a measure that prompts investigation after enough observations.
+
+Quality protection is not satisfied by a nonsignificant difference in a small sample. A pilot with little data may simply be unable to detect deterioration. Review counts, severity, uncertainty, and case evidence together. A small number of serious failures can matter more than an average that appears unchanged.
+
+## 11. Make the comparison trustworthy
+
+A randomized comparison assigns eligible units to a treatment or control so that, on average, other influences are balanced. It estimates the effect of the tested experience in the population and period studied. Randomization does not repair missing logs, inconsistent eligibility, or a treatment that changes halfway through the experiment.
+
+Choose the assignment unit to match how the experience works. A persistent visitor or account assignment can reduce switching between versions across sessions. In employee workflows, randomizing individuals or teams may be more appropriate than individual tasks if people carry learning from one task to another. Correlated observations require an analysis that reflects that structure.
+
+### Check the data before interpreting the effect
+
+Verify assignment, eligibility, exposure, outcomes, and exclusions with known test cases. An A/A check, where both groups receive the same experience, can help identify implementation problems, although a quiet result does not prove every part of the system is correct.
+
+Microsoft’s experimentation guidance describes sample ratio mismatch: the observed group counts differ from the configured allocation beyond what chance would reasonably explain. Causes can arise in assignment, execution, logging, or analysis. Investigate such a signal before trusting the outcome comparison. Do not “fix” it by deleting observations until the groups look equal. \[6]
+
+### Plan around precision and time
+
+Ask an analyst to estimate the sample needed for the smallest effect worth acting on, using the baseline, statistical approach, desired power, and assignment structure. For an illustrative independent two-group conversion test, detecting a change from 4.0% to 4.4% with roughly 80% power and a two-sided 5% significance level requires about 39,500 visitors per group under a standard normal approximation. Real design details can change that requirement.
+
+A team with 10,000 visitors per group can still learn about feasibility and large effects, but should not expect to reliably resolve that smaller commercial difference. Six weeks on a calendar does not create the required sample. Nor does it mature returns that happen after the observation period.
+
+### Avoid reading noise as a decision
+
+Choose a fixed analysis point or a valid sequential method with the measurement lead before launch. Repeatedly checking an ordinary fixed-horizon significance test and stopping when it becomes favorable increases false-positive risk. Operational monitoring for harm should continue regardless; it serves a different purpose from declaring success.
+
+If randomization is not feasible, use another design honestly. A before-and-after comparison can be distorted by promotions, seasonality, staffing, or product mix. Matched comparisons and other methods may help, but their assumptions need review. A usability study can answer a usability question without pretending to prove revenue impact.
+
+## 12. Run a six-week learning cycle
+
+The following schedule assumes the team has an authorized route to the needed tools and data and can complete the relevant prerequisites in time. If contracting, integration, or required reviews need longer, track that preparation separately. Keep the learning plan intact instead of compressing essential work to preserve a launch date.
+
+### Week one: establish the problem and decision
+
+Review customer evidence, observe the current task, and agree on the decision the pilot will inform. Write the problem statement, eligible population, baseline definitions, and alternative approaches. Identify the people who will operate and receive the work. End the week with a short brief that the team can challenge.
+
+### Week two: prepare data and test the concept
+
+Confirm source coverage and permissions, build a small prototype, and run initial usability sessions. Draft the evaluation rubric and representative cases. Document unsupported questions and fallback behavior. A data gap discovered now is useful progress if it prevents the team from building an experience that cannot answer its core question.
+
+### Week three: verify the complete path
+
+Complete offline evaluation, instrumentation checks, and operational rehearsal. Test switching the feature off and preserving the standard experience. Train the people handling escalations. Confirm that every open prerequisite has either been completed or explicitly blocks launch. Do not substitute a successful demo for this readiness review.
+
+### Weeks four and five: observe a bounded live experience
+
+Launch to the agreed population after a controlled readiness ramp, then operate the declared measurement phase. Keep safety and quality monitoring active. Record exposure failures, support work, vendor changes, and customer questions. Review qualitative evidence without repeatedly changing the treatment in response to every interesting conversation.
+
+### Week six: finish observation and make the next decision
+
+Allow the defined follow-up window to mature for the last included visitors. If assignment continues through the end of week five and conversion uses seven days of follow-up, the week-six readout must occur after that window closes. Longer outcomes, such as returns, remain pending and need their own later review.
+
+| **Weekly output**            | **Decision it supports**                |
+| ---------------------------- | --------------------------------------- |
+| Problem and hypothesis brief | Is this the right question?             |
+| Data and concept evidence    | Is the proposed experience plausible?   |
+| Readiness record             | Can the bounded pilot start?            |
+| Live operating log           | Is the experience behaving as intended? |
+| Evidence readout             | What should we do next, and why?        |
+
+Northline’s six-week cycle is explicitly a feasibility pilot with exploratory commercial measurement. If the team proceeds, a later validation receives its own sample plan and schedule. This prevents the pilot deadline from becoming pressure to describe incomplete evidence as a proven result.
+
+## 13. Operate the pilot as a real service
+
+Once customers can use the experience, the pilot creates real work and real expectations. Assign a person to monitor the service during its supported hours, a technical contact for failures, and a decision maker who can suspend it. A feature flag is useful only if someone knows when and how to use it.
+
+Keep a short operating log with time, version, issue, affected scope, action, owner, and outcome. Separate product-learning questions from incidents. “People ask about a missing feature” may inform the backlog. “The assistant shows the wrong product measurement” requires correction and assessment of impacted users.
+
+### Monitor outcomes at several levels
+
+Check whether the feature loads, whether requests complete, whether answers use the right sources, and whether users can recover. A server can be healthy while the experience is unusable. A model can return text successfully while giving the wrong answer. Technical availability and customer task success need different observations.
+
+Sample live responses using a defined method rather than reviewing only conversations that received negative feedback. Include unsupported requests and abandoned interactions. Record the number reviewed and why they were selected. This makes the quality result interpretable and reduces the temptation to showcase only the best conversations.
+
+### Give staff a short playbook
+
+The team needs the pilot scope, known limitations, customer-facing explanation, escalation path, and authority boundaries. A specialist should know whether they can correct a product record, disable an item, or only report an issue. Do not place responsibility for model failures on employees who lack the tools to resolve them.
+
+Ask staff what additional work the pilot creates. They may be validating answers, reconciling logs, answering new questions, or manually repairing failed interactions. Capture that effort while it is visible. It belongs in the operating model and the cost calculation, even if an enthusiastic project team initially absorbs it for free.
+
+### Handle changes deliberately
+
+Record model, prompt, data, and interface changes. A necessary fix may justify pausing and restarting the measurement phase or analyzing versions separately. If a vendor changes a model during the pilot, assess whether existing evaluation evidence still applies before continuing unchanged.
+
+After an incident, verify that the underlying problem is corrected and that residual customer work has an owner. Turning the feature off prevents new exposure; it does not automatically repair earlier misinformation or a failed transaction. End each operating review with a short set of actions and responsible people, rather than a growing list of unowned concerns.
+
+## 14. Work through Northline’s evidence
+
+This chapter uses a hypothetical result set to show how a disciplined readout works. The pilot’s purpose was feasibility: could a verified fit-explanation assistant operate well enough to justify stronger validation? The team also estimated purchase conversion, knowing that the field sample would not reliably detect a modest lift.
+
+Before the live phase, Northline tested 240 reserved cases. Reviewers passed 228 on the full rubric, producing a 95% overall pass rate. The 12 failures were noncritical clarity or recovery issues; no critical failure was observed. The declared release rule required at least 95% overall passing and zero unresolved critical failures. Those are illustrative local rules. Zero observed critical failures does not establish zero future risk.
+
+### Read the field funnel correctly
+
+After the measurement window and seven-day conversion follow-up, each randomized group contains 10,000 eligible visitors. In treatment, 9,600 received a rendered feature and 2,000 opened it. Those are 96% rendering and 20% opening rates relative to assignment. The team investigates the 400 rendering failures rather than excluding them from the commercial comparison.
+
+| **Commercial result**                 | **Control** | **Treatment** |
+| ------------------------------------- | ----------- | ------------- |
+| Assigned eligible visitors            | 10,000      | 10,000        |
+| Visitors purchasing within seven days | 400         | 440           |
+| Purchase conversion                   | 4.0%        | 4.4%          |
+
+The observed difference is 0.4 percentage points, or 10% relative to the control rate. Under a simple independent-binomial normal approximation, the approximate 95% confidence interval for the difference runs from −0.16 to +0.96 percentage points. It includes no effect and a small negative effect. The team cannot claim that the pilot established a conversion increase. These calculations are instructional; a real analysis must match the actual assignment and data structure.
+
+### Combine quality and customer evidence
+
+Suppose a random sample of 200 live answers has 192 passing the rubric, with eight noncritical failures. A separate challenge review identifies recurring confusion between garment measurements and body measurements. The random sample describes the reviewed live cases; the challenge set diagnoses a failure mode. Do not combine their denominators into one quality percentage.
+
+Of 300 users who answer a helpfulness question, 240 respond positively: 80% of respondents. If 2,000 people opened the assistant, the response rate is 15% of openers. Report both numbers. The result does not show that 80% of all eligible visitors found the feature helpful.
+
+### Make a proportionate decision
+
+Northline decides to revise measurement wording and rendering reliability, then seek a larger commercial validation. It does not expand to every category. Return outcomes remain immature, and the commercial estimate is inconclusive. The pilot still earns a useful decision by establishing what works, identifying specific weaknesses, and defining the evidence needed next.
+
+## 15. Build economics that survive real operation
+
+An economic model should distinguish observed effects, assumed future effects, and costs. Start with the eligible workload or traffic, not the entire business. An assistant used on a limited product set cannot be credited with improving every purchase. Likewise, adoption assumptions should reflect actual user choice and feature availability.
+
+For a commerce pilot, estimate incremental contribution rather than treating all additional revenue as profit. Account for product margin, discounts, returns, fulfillment, payment costs, and service effects in the manner appropriate to the business. Finance should confirm the definition so the same cost is not subtracted twice or omitted entirely.
+
+### Work a simple sensitivity example
+
+Assume a future deployment reaches 100,000 eligible visitors per month and produces $30 of contribution per incremental purchase before the new assistant’s costs. At the pilot’s observed 0.4-percentage-point difference, the scenario yields 400 additional purchases and $12,000 in contribution. Because the pilot did not establish that effect, this is a planning scenario, not a validated forecast.
+
+Suppose recurring assistant costs are $8,000 per month, including usage, vendor fees, quality review, maintenance, and support. The scenario’s recurring net value is $4,000. If one-time implementation costs are $24,000, simple payback would be six months only if the assumed benefit persists and the stated costs are complete. The base case is fragile when the effect is uncertain.
+
+| **Assumed conversion difference** | **Added purchases per 100,000 visitors** | **Monthly net after $8,000 cost** |
+| --------------------------------- | ---------------------------------------- | --------------------------------- |
+| −0.1 percentage points            | −100                                     | −$11,000                          |
+| 0.0 percentage points             | 0                                        | −$8,000                           |
+| +0.4 percentage points            | +400                                     | +$4,000                           |
+| +0.8 percentage points            | +800                                     | +$16,000                          |
+
+These scenarios are selected for sensitivity analysis; they are not probabilities or a confidence interval. Under these assumptions, recurring break-even requires about 267 additional purchases, equivalent to roughly 0.267 percentage points. One-time costs raise the benefit needed for a chosen payback period.
+
+### Count human time honestly
+
+For employee-facing tools, measure the complete workflow: preparation, prompting, waiting, review, correction, and downstream rework. Distinguish active labor from elapsed time when people can work on other tasks while the system runs. Do not count simultaneous time savings twice.
+
+Hours released are capacity value unless staffing or spending actually changes. Explain how that capacity will be used, such as handling more cases or improving quality. A credible model can include benefits that are difficult to monetize, but should describe them separately instead of assigning an unsupported dollar value to trust or employee satisfaction.
+
+## 16. Decide whether to stop, revise, validate, or expand
+
+A pilot readout should make the next action clear. Begin with the recommendation, then show the evidence that supports it, the limitations, and the unresolved work. Avoid opening with a chronology of meetings or a collection of favorable screenshots. Decision makers need to understand what was learned and what commitment is now justified.
+
+Separate four questions: was the experiment valid, was the experience useful, was it acceptably reliable, and is the next investment justified? A positive commercial estimate cannot compensate for invalid logging. A reliable system can still fail to solve an important problem. A useful prototype can still be too expensive to operate in its present form.
+
+### Use distinct decision outcomes
+
+| **Decision**     | **Appropriate situation**                                                           | **Required next step**                                           |
+| ---------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Stop             | The problem is weak, the approach is unsuitable, or costs outweigh plausible value. | End exposure and preserve the learning.                          |
+| Revise           | A specific, fixable weakness blocks the hypothesis.                                 | Name the change and the evidence needed to retest.               |
+| Validate further | Feasibility is credible but the business effect remains uncertain.                  | Fund a stronger design with explicit sample and outcome windows. |
+| Expand in stages | Evidence supports the next defined population and operations are ready.             | Set exposure limits, monitoring, and a new review point.         |
+
+An inconclusive result is not a failure to choose. The decision can be that the uncertainty is too large to justify rollout, but narrow enough to justify a larger experiment. It can also be that the next experiment would cost more than the information is worth. Make that trade-off visible.
+
+### Do not move the goalposts
+
+If the primary outcome is weak and one unplanned subgroup looks strong, label the subgroup finding exploratory. It may generate a future hypothesis. It should not silently replace the original success criterion. Searching many outcomes and segments increases the chance of finding an attractive result by accident.
+
+Likewise, avoid interpreting a nonsignificant negative result as proof of no harm. Review the interval and whether it excludes deterioration the business considers unacceptable. A small study often leaves both useful improvement and meaningful harm plausible.
+
+### Write the decision record
+
+Include the tested scope and version, comparison, dates, sample, primary result with uncertainty, quality and customer evidence, costs, incidents, and pending outcomes. Name the decision maker and the conditions attached to the next step. For Northline, the recommendation is further validation after specific fixes, not a claim that the observed 10% relative difference is a proven gain.
+
+Close the loop with participants and partner teams where appropriate. Explain what their feedback changed. When a pilot stops, acknowledge the useful learning and release resources deliberately. A respectful ending makes people more willing to participate honestly in the next experiment.
+
+## 17. Transfer the work into everyday operations
+
+A successful pilot can fail during handoff if the receiving team gets a presentation but not the knowledge and resources needed to operate the experience. Production ownership should begin during discovery and become concrete before expansion. The innovation team should not remain an invisible permanent support desk.
+
+Transfer the customer problem and evidence alongside the software. The receiving team needs to know which population was tested, what behavior was supported, what failed, and what remains uncertain. A list of features does not explain why a particular fallback or eligibility rule exists.
+
+### Build an operating package
+
+Include the current product scope, source-data owners, model and configuration records, evaluation cases, known limitations, incident process, support responsibilities, monitoring, cost model, and change procedure. Specify who approves new product categories, data sources, permissions, or customer-facing claims. Those additions may require new evaluation rather than a routine configuration change.
+
+Have the receiving team perform a rehearsal. Can they update a product fact, diagnose an incorrect answer, disable an affected item, roll back a version, and explain a customer complaint? A successful rehearsal is more informative than an acknowledgment that the handoff document was received.
+
+### Expand one meaningful dimension at a time
+
+Adding another language, market, category, or transaction capability can change performance. New products may use different measurement conventions. Another market may have different service expectations. A new payment action introduces execution risk that an explanation pilot never tested. Evaluate the changed assumptions before treating earlier evidence as sufficient.
+
+Use staged exposure with pre-agreed review points. Keep monitoring both quality and customer outcomes after launch. An initial benefit may change as novelty fades, the catalog changes, or users develop different habits. Record model and source changes so a performance shift can be investigated.
+
+### Define acceptance and exit
+
+The receiving owner should explicitly accept the service scope, capacity, ongoing costs, monitoring, and unresolved items. Give unresolved items deadlines and owners. If there is no funded operational home, the honest result may be a completed pilot awaiting investment rather than an unsupported production service.
+
+Plan for retirement as well as growth. An experience may become redundant when the standard product improves or a simpler approach becomes available. Preserve useful data and evaluation knowledge according to the agreed retention rules, remove obsolete access, and communicate customer-facing changes. Good experimentation includes the ability to stop operating something that no longer earns its place.
+
+## 18. Build a learning practice that compounds
+
+The value of a pilot program is not the number of demonstrations it produces. It is the quality of decisions it helps the organization make. A small portfolio of well-framed experiments can create more useful knowledge than a long list of pilots that never reach a clear conclusion.
+
+Keep an evidence register with the problem, hypothesis, owner, scope, method, result, decision, and reusable learning. Include stopped and inconclusive work. Otherwise new teams repeatedly rediscover the same data gaps or revive an idea without understanding why it previously struggled.
+
+### Reuse the right things
+
+Reusable assets include verified source connections, evaluation rubrics, realistic test cases, measurement definitions, accessible interaction patterns, and operating procedures. A prompt may be useful too, but it is rarely the entire capability. Document the conditions under which an asset worked so another team can assess whether it applies.
+
+Northline’s explanation pilot might produce a better product-data checklist and a clearer way to distinguish garment from body measurements. Those improvements can help the standard website even if the assistant does not proceed. Count that learning honestly without using it to disguise an unsupported commercial claim.
+
+### Protect time for reflection
+
+Hold a short review after each decision. Ask which assumption changed, which evidence was most useful, where the team spent avoidable effort, and what should be done differently next time. Separate a flawed hypothesis from a flawed process. A well-run test can reject an idea; a poorly run test may leave the team unable to tell.
+
+Limit active work to what the team can support. Too many simultaneous pilots divide the attention needed for data preparation, user research, and incident response. Queue ideas with explicit prerequisites instead of launching them all under the label of speed. Include receiving-team capacity in the portfolio discussion.
+
+### Keep the human purpose visible
+
+Return to the original question at every decision: whose experience improved, and how do we know? The answer may involve less confusion, fewer corrections, better choices, more useful time, or stronger commercial performance. It should be specific enough that a reader can distinguish evidence from aspiration.
+
+The worksheets that follow help turn this playbook into working practice. Begin with one problem, one accountable team, and one decision worth making. Build enough to learn, measure the full experience, and let the evidence determine the next commitment.
+
+## Worksheet A. The experiment brief
+
+Complete this before selecting a vendor or building a prototype. Use short, concrete answers. A colleague should be able to explain the customer problem and the proposed decision after reading this page.
+
+* Pilot name and accountable owner:
+* Customer or employee group and situation:&#x20;
+* Problem, consequence, and supporting evidence:&#x20;
+* Current experience and baseline definition:
+* Proposed intervention and simpler alternative:&#x20;
+* Hypothesis—change, outcome, and mechanism:&#x20;
+* Eligible scope and excluded actions:
+* Decision this pilot will inform:
+* Most important assumption to test first:&#x20;
+* Next action, responsible person, and date:&#x20;
+
+Review question: if the technology were removed from this page, would the customer problem still be clear? If not, return to discovery before committing to the solution.
+
+## Worksheet B. The measurement contract
+
+Complete with the measurement lead before the live phase. Record definitions precisely enough that another analyst could reconstruct the comparison. Use an attached analysis plan when the design requires more detail.
+
+* Primary outcome, numerator, and denominator:
+* Eligibility, assignment unit, and treatment persistence:
+* Control experience and treatment version:&#x20;
+* Observation window and final follow-up date:&#x20;
+* Baseline and smallest effect worth acting on:&#x20;
+* Required sample, expected sample, and implications:&#x20;
+
+| **Protection or diagnostic**  | **Definition, threshold, and owner** |
+| ----------------------------- | ------------------------------------ |
+| Quality and critical failures |                                      |
+| Customer effort or choice     |                                      |
+| Reliability and fallback      |                                      |
+| Cost and manual work          |                                      |
+
+* Data validation and mismatch checks:&#x20;
+* Exclusions and handling of missing outcomes:&#x20;
+* Analysis timing and method:&#x20;
+* Outcomes that will remain immature at readout:&#x20;
+
+Review question: could an apparently positive result be created by changing a denominator, excluding nonusers, or stopping early? Specify the rules that prevent that interpretation error.
+
+## Worksheet C. Readiness and operating plan
+
+Use this as a conversation with the people who will run the pilot. Each unresolved item needs an owner and a consequence: blocks launch, limits scope, or requires a dated follow-up. Do not replace evidence with a checkmark.
+
+Scope, version, and intended launch window: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+| **Readiness area**                        | **Evidence or unresolved dependency** |
+| ----------------------------------------- | ------------------------------------- |
+| Data sources and authorized use           |                                       |
+| Offline evaluation and critical cases     |                                       |
+| User experience and accessibility         |                                       |
+| Assignment and outcome logging            |                                       |
+| Relevant reviews and agreements           |                                       |
+| Support coverage and escalation           |                                       |
+| Disable, rollback, and recovery rehearsal |                                       |
+| Cost limit and receiving owner            |                                       |
+
+* Condition that immediately pauses exposure:&#x20;
+* Person who can act and backup contact:&#x20;
+* How the standard experience remains available:
+* Live review cadence and sampling method:
+* Open blocker, responsible person, and date:&#x20;
+* Launch decision and decision maker:
+
+Review question: if the assistant fails on the first day, can the team stop new exposure, help affected users, and identify what happened without depending on one unavailable person?
+
+## Worksheet D. Decision and handoff record
+
+Lead with the decision. Attach the evidence readout, including uncertainty and pending outcomes. Complete a new record after each material validation or expansion rather than overwriting the history.
+
+Decision: stop / revise / validate further / expand in stages
+
+* Decision maker and date:
+* Tested scope, version, dates, and sample:&#x20;
+* Primary result and uncertainty:
+* Customer and quality evidence:&#x20;
+* Actual costs, manual work, and economic assumptions:&#x20;
+* Limitations, incidents, and immature outcomes:&#x20;
+* Why the evidence supports this decision:&#x20;
+* Next commitment, owner, budget, and review date:&#x20;
+* Receiving owner and conditions for acceptance:
+* Reusable learning to preserve:&#x20;
+
+Review question: does the decision describe what the evidence supports, including its limits, or what the team hoped to announce?
+
+## Sources and editorial notes
+
+This guide develops a practical experimentation method for the guide series by Darko Tushev. It is not a report of any employer’s internal program. Northline, Maya, the six-week plan, thresholds, result tables, financial scenarios, and worksheets are illustrative. External research supports the specifically cited claims, not the invented pilot outcomes.
+
+\[1] Brynjolfsson, E., Li, D., and Raymond, L. “Generative AI at Work.” arXiv:2304.11771, version 2, revised November 6, 2024. Source for the 5,172-agent sample, 15% average issues-resolved-per-hour improvement, and heterogeneous effects. Version details matter because earlier versions report different figures.
+
+[Open source ↗](https://arxiv.org/abs/2304.11771v2)
+
+\[2] METR. “Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity.” July 10, 2025. Source for the randomized study of 16 developers and 246 issues and the reported 19% increase in completion time. A historical finding about the studied setting and tools.
+
+[Open source ↗](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
+
+\[3] METR. “We are Changing our Developer Productivity Experiment Design.” February 24, 2026. Source for the follow-up study’s selection and time-measurement limitations and the need to revise the design. Read alongside the earlier study when discussing its relevance to newer tools.
+
+[Open source ↗](https://metr.org/blog/2026-02-24-uplift-update/)
+
+\[4] National Institute of Standards and Technology. “AI Risk Management Framework.” Source for the framework’s voluntary purpose. The website states that AI RMF 1.0 is under revision; consult current materials when applying it.
+
+[Open source ↗](https://www.nist.gov/itl/ai-risk-management-framework)
+
+\[5] NIST AI Resource Center. “AI RMF Core.” Reference for the Govern, Map, Measure, and Manage functions. This playbook’s operating suggestions do not constitute certification against the framework.
+
+[Open source ↗](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)
+
+\[6] Microsoft Research, Experimentation Platform. “Diagnosing Sample Ratio Mismatch in A/B Testing.” September 14, 2020. Reference for identifying and investigating allocation discrepancies before interpreting experimental effects.
+
+[Open source ↗](https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/)
+
+Sources checked September 8, 2026. Statistical examples use standard normal approximations for independent groups and are rounded for readability. They are teaching calculations, not a substitute for a design-specific analysis. Apply the permissions, product requirements, and review processes relevant to the actual pilot.

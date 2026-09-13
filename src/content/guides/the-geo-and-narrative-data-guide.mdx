@@ -1,0 +1,657 @@
+---
+title: The GEO & Narrative Data Guide
+description: >-
+  Moving from Keywords to Conversations: Structuring Product Truth for AI
+  Discovery. A field guide to clear product explanations, reliable data, and
+  better-informed customer decisions.
+---
+## **How to use this guide**
+
+For retail, marketing, product, content, and digital-experience teams. PLEASE read the chapters in sequence to build the foundation. Technical concepts are explained in business language.&#x20;
+
+1\. Start with the shopper’s question
+
+2\. Read the evidence without buying the hype
+
+3\. SEO, GEO, and agentic commerce are related—not identical
+
+4\. Your three-pillar operating framework
+
+5\. Turn customer language into an intent map
+
+6\. Build a product truth record
+
+7\. Write narrative data people can actually use
+
+8\. Structure product identity before adding markup
+
+9\. Pages, feeds, social previews, and internal retrieval
+
+10\. Protect price, availability, and delivery truth
+
+11\. Build pages that answer and support comparison
+
+12\. Make imagery, fit, and localization work together
+
+13\. Turn questions and returns into a learning loop
+
+14\. Use AI to draft, not to invent evidence
+
+15\. Measure visibility, accuracy, and customer value separately
+
+16\. Design an experiment you can learn from
+
+17\. Assign ownership and a correction path
+
+18\. Your 90-day implementation plan
+
+Worksheet A. Product truth and narrative canvas
+
+Worksheet B. Twenty-product content health audit
+
+Worksheet C. Experiment and readout brief
+
+Sources, scope, and further reading
+
+Use the worksheets after reading the worked example. No proprietary company results are claimed; illustrative specifications, calculations, and proposed pilot parameters are labeled throughout.
+
+## 1. Start with the shopper’s question
+
+A shopper is not really looking for a database record. She is trying to solve a problem: find trousers that work for a summer wedding, survive a train journey, fit comfortably while sitting, and arrive before Friday. A catalog may contain thousands of technically correct records and still leave her unable to make that decision. The gap is not always a missing product. It is often missing explanation.
+
+Traditional search, product filters, store associates, reviews, and AI assistants can all help close that gap. Conversational discovery adds another way to express a need, especially when several constraints interact. A shopper can describe the whole situation rather than guessing which filter the retailer has provided. That does not mean every customer has abandoned search bars. It means your product information must support more than one way of asking.
+
+### What this guide means by GEO
+
+Generative engine optimization, or GEO, is the practice of improving how accurately and usefully a brand’s information can be discovered, interpreted, and represented in AI-generated answers. In this guide, the objective is qualified visibility: showing up for a relevant need with facts that help the shopper make a sound choice. A mention that promises the wrong fit, price, or delivery date is not a win.
+
+The accompanying idea, narrative data, means verified product facts explained in the context of real decisions. It is not decorative storytelling. “Relaxed through the thigh, with a fixed waistband and no added stretch” is narrative data because it connects construction with a practical fit consideration. “Your perfect companion for every adventure” does not tell the shopper enough to act.
+
+### Follow one product through the guide
+
+Our recurring example is the fictional Harbor Linen-Blend Trouser from the fictional retailer Northline. Every specification, price, customer scenario, and internal metric attached to this example is invented for teaching. It is not a claim about Gap Inc. or another retailer. The example lets us examine one problem from content, merchandising, engineering, service, and analytics perspectives without pretending that a real company achieved a particular result.
+
+The promise: Help people understand what a product is, when it may suit their needs, where its limits are, and which details still require confirmation.
+
+By the end of the guide, you should have a product truth record, a question backlog, a publishable content brief, a distribution checklist, and a measurement plan. These are useful even if a particular AI platform never cites your page. Better explanations can also help shoppers, store associates, internal search, and customer care.
+
+## 2. Read the evidence without buying the hype
+
+There is evidence that AI-assisted discovery deserves attention. Adobe’s April 2026 Quarterly AI Traffic Report reported 393% year-over-year growth in AI-driven U.S. retail traffic during Q1 2026. It also reported that AI-referred retail visitors converted at a rate 42% higher than non-AI traffic in March 2026. Its March survey of more than 5,000 U.S. respondents found that 39% had used AI assistants for online shopping. \[1]
+
+These figures describe different things: traffic growth, a comparison between visitor groups, and self-reported adoption. They are not interchangeable. A large growth percentage does not disclose the channel’s absolute share of your business. A higher conversion rate does not prove that an assistant caused the increase; the people arriving through that route may already have stronger purchase intent.
+
+### Three categories of evidence
+
+Platform documentation tells you what a particular system publicly supports. Research explores methods under stated experimental conditions. Your own tests show what happened to your catalog, audience, and measurement setup. Strong decisions use all three but keep their boundaries visible.
+
+The original GEO research, accepted to KDD 2024, reported visibility improvements of up to 40% in its evaluation and found that effects varied by domain. That is a research result, not a forecast of retail sales or a guaranteed improvement across current commercial assistants. \[2] It is a reason to test carefully, not to promise a universal formula.
+
+### A grounded starting point
+
+Google states that its existing SEO practices remain relevant to AI Overviews and AI Mode. It does not require special AI markup or a new AI text file for inclusion, and eligibility does not guarantee appearance. \[3] This matters because teams can otherwise spend months producing technical artifacts while leaving basic product facts unresolved.
+
+Consider an illustrative growth calculation: AI-referred visits rise from 100 to 500, an increase of 400%. If total visits also rise from 100,000 to 125,000, AI’s share moves from 0.10% to 0.40%. Both growth and share matter. The first indicates momentum; the second helps size the opportunity. Neither tells you whether the recommendations were accurate.
+
+Decision rule: Treat external evidence as a reason to investigate. Use your own baseline, customer problems, and controlled experiments to decide what to fund.
+
+## 3. SEO, GEO, and agentic commerce are related - not identical
+
+Search engine optimization helps people and search systems find and understand useful pages. GEO adds attention to how that information is represented inside generated answers: whether a product is included, whether the explanation is accurate, and whether the cited evidence actually supports it. These disciplines overlap substantially. An inaccessible page with confusing product identity is a problem for both.
+
+Agentic commerce goes further. It concerns systems that can perform shopping actions within an authorized scope, such as assembling a cart or initiating a transaction. Being mentioned in an answer is different from being available for purchase through that assistant. Do not assume that publishing better descriptions creates a checkout integration.
+
+| **Discipline**   | **Main question**                                   | **Example outcome**                                        |
+| ---------------- | --------------------------------------------------- | ---------------------------------------------------------- |
+| SEO              | Can relevant people find and use this page?         | A shopper reaches the correct product page.                |
+| GEO              | Is the product represented accurately in an answer? | The answer explains fit and cites supporting information.  |
+| Agentic commerce | Can an authorized system take the next action?      | A supported integration checks an offer and builds a cart. |
+
+### Understand the routes information can take
+
+A useful working model separates four routes. A system may rely on information learned during model training; retrieve public pages or search results at answer time; consume a partner’s product feed; or call an authorized service for a current answer. Actual platforms combine these routes differently, and their internal selection methods are not fully visible to brands.
+
+Each route implies a different operational problem. Updating a page does not instantly replace information already learned by a model. Updating a feed does not prove that a partner has processed it. A live service can provide a fresh price, but only if the assistant uses that service and the request resolves the correct item, market, and customer eligibility.
+
+### Diagnose the missing link
+
+Suppose an assistant recommends Harbor trousers but quotes an old price. First record the exact answer and linked source. Check whether the error came from your current page, an old editorial article, a partner feed, or an unknown source. Fixing a copy paragraph will not solve a broken feed export. Likewise, adding more markup will not correct a third-party review’s historical price.
+
+This is why the program needs both content and operations. The content team explains the product. Technical teams make approved information available. Merchandising and commerce teams maintain the offer. Analytics helps distinguish failure to appear from failure to represent the product correctly.
+
+## 4. Your three-pillar operating framework
+
+The original framework in this resource rests on three pillars: contextual attribute enrichment, structured semantic data, and a recursive context-capture loop. Together they describe an operating discipline rather than a one-time copywriting project. The question is not simply “Have we added enough words?” It is “Can we keep producing useful, supported answers as products and customer needs change?”
+
+### Pillar 1: Contextual attribute enrichment
+
+Start with the facts that help a shopper judge suitability. Color and fiber composition matter, but so do garment measurements, stretch, closure type, lining, care requirements, and the conditions under which a feature has been tested. Connect these facts to relevant uses without inventing performance. A linen blend is a material fact; guaranteed comfort in humid weather requires more evidence than the fiber name alone.
+
+### Pillar 2: Structured semantic data
+
+Maintain clear identities and relationships: product family, purchasable variant, offer, market, and policy. Publish appropriate structured information in the formats your destinations support. The word semantic simply means that the data describes meaning and relationships, not just a pile of labels. A size belongs to a particular variant; a price belongs to an offer in a particular currency and market.
+
+### Pillar 3: The context-capture loop
+
+Listen to recurring questions from support, reviews, returns, site search, and store associates. Turn those questions into an evidence backlog. Resolve the underlying uncertainty with the right owner, update the approved record, then publish the answer where it belongs. Measure whether the original confusion declines. The loop is incomplete if a team collects questions but never assigns anyone to answer them.
+
+### What each pillar produces
+
+For Harbor trousers, enrichment produces a fact-supported explanation of fixed-waistband fit and care. Structure connects the navy, size-8, regular-length variant to the correct offer. The feedback loop detects that shoppers keep asking whether the waistband stretches, then places a clear answer beside the size selector and in the content brief.
+
+Start small: Select one category and twenty products. Prove that facts, ownership, publishing, and feedback work together before expanding across thousands of items.
+
+Do not treat the pillars as separate departmental handoffs that end at launch. The same product identifier should connect all three. When a supplier changes a fabric specification, the narrative, structured fields, and related answers should be reviewed together. Otherwise yesterday’s accurate explanation becomes tomorrow’s misleading recommendation.
+
+## 5. Turn customer language into an intent map
+
+An intent map organizes the problems people are trying to solve. It helps your team decide which information to collect and which pages to improve. Start with real, permitted customer-language sources. A workshop can generate useful hypotheses, but those guesses should not silently become evidence of demand.
+
+Our shopper, Maya, asks: “I need navy trousers for an outdoor wedding, under $100, and I don’t want to dry-clean them.” Her request contains an occasion, a color, a budget, and a care constraint. If she adds “I travel Friday,” timing becomes important. If she says “I hate tight waistbands,” fit becomes important. An assistant should not infer a medical condition or body type from that preference.
+
+### Separate hard constraints from preferences
+
+Hard constraints eliminate an option: the available size, a maximum price, a required arrival date, or an unacceptable care method. Preferences help compare surviving options: a relaxed silhouette, a textured fabric, or a particular styling mood. Treating preferences as hard rules can unnecessarily narrow the assortment. Treating hard constraints as optional can produce a recommendation the shopper cannot use.
+
+| **Customer wording**       | **Information needed**                 | **Appropriate owner**     |
+| -------------------------- | -------------------------------------- | ------------------------- |
+| “No dry cleaning”          | Approved care instructions             | Product quality           |
+| “Comfortable while seated” | Waistband, stretch, measurements       | Technical design          |
+| “By Friday”                | Destination-specific delivery estimate | Fulfillment               |
+| “Under $100”               | Current eligible offer and currency    | Pricing                   |
+| “Outdoor wedding”          | Styling context and stated limits      | Editorial / merchandising |
+
+### Build a question backlog
+
+Record the question, source channel, frequency, affected products, answer status, and owner. Group near-duplicates without erasing meaning. “Does it stretch?” and “Will the waist give after lunch?” may share an underlying need, but “Does it shrink?” is a different question requiring different evidence.
+
+Prioritize questions that block a purchase or repeatedly cause disappointment. A common unanswered care question may be more valuable than producing ten new occasion pages. Also review rare but consequential questions: accessibility, product safety, or a material allergy concern may deserve escalation even when volume is low.
+
+The deliverable is a short list of information gaps that people recognize. For each gap, write the intended answer and what evidence is missing. This prevents an AI drafting tool from filling an empty field with a plausible-sounding guess. An unanswered question is a research task, not permission to improvise.
+
+## 6. Build a product truth record
+
+A product truth record is a governed collection of approved facts and their scope. It does not require a new software purchase. It can begin as a controlled worksheet, then move into your product information management system as the process matures. Its value comes from definitions, evidence, and ownership—not from the name of the database.
+
+Separate facts from interpretations. A garment measurement is a fact under a stated measurement method. “Suitable for relaxed summer styling” is an editorial interpretation. Both can be useful, but they should not carry identical evidence status. A customer review is an observation by one person, not a laboratory result or a promise that applies to every wearer.
+
+### Harbor: an illustrative approved record
+
+| **Field**           | **Fictional value**         | **Scope / evidence**               |
+| ------------------- | --------------------------- | ---------------------------------- |
+| Family identifier   | HLT-01                      | Product master                     |
+| Variant identifier  | HLT-NV-08-R                 | Navy, US 8, regular                |
+| Material            | 55% linen, 45% cotton       | Approved specification             |
+| Waistband / stretch | Fixed; no added stretch     | Technical design record            |
+| Inseam              | 30 inches                   | This variant’s measurement         |
+| Care                | Machine wash cold; line dry | Approved care label                |
+| Reference offer     | USD 89                      | Teaching example; not a live price |
+
+### Add the fields that prevent misuse
+
+Every important claim should carry a source reference, an approving role, a review date, and an applicability boundary. If a measurement applies only to regular length, do not inherit it into tall and petite variants. If a test applies only to a specific fabric finish, a supplier substitution should trigger re-review. “Unknown” and “not tested” should remain legitimate values.
+
+Use a claim register for statements with higher consequences. “Waterproof,” “wrinkle-resistant,” and “certified organic” are not harmless synonyms for “useful outdoors,” “easy to wear,” and “natural.” Store the exact approved wording, its supporting evidence, and any qualification. A copywriter should not strengthen a carefully qualified claim just to make a sentence sound more confident.
+
+For smaller teams, begin with ten core fields and the five customer questions that matter most. Assign a named reviewer for each fact domain. A simple record that is kept current is more useful than an ambitious taxonomy that no one maintains. The test is whether another person can trace a sentence on the product page back to its approved basis.
+
+## 7. Write narrative data people can actually use
+
+Good narrative data links a fact to a decision, then states its boundary. A practical writing pattern is: product fact, likely relevance, limitation, next step. This is an editorial method proposed by this guide, not a ranking rule. It helps writers explain the product without making every item sound ideal for every situation.
+
+### Before: attractive but unhelpful
+
+“Meet your new summer essential. These elevated trousers deliver effortless sophistication and unmatched comfort wherever the season takes you.” The sentence creates a mood but offers little help with fit, care, or suitability. “Unmatched comfort” is also a broad comparative claim with no supporting basis in our fictional record.
+
+### After: specific and bounded
+
+“The Harbor Linen-Blend Trouser combines a relaxed leg with a fixed waistband and no added stretch. The navy color can be styled with a shirt and loafers for a relaxed wedding look; check the event’s dress code before choosing. This regular-length variant has a 30-inch inseam. Machine wash cold and line dry according to the care label. If waistband flexibility is a priority, compare it with an elastic-waist option.”
+
+The revised version supports a decision without guaranteeing an experience. It also leaves unknowns alone. We have not claimed wrinkle resistance, rapid drying, humidity performance, or a precise temperature range. Those details do not appear in the approved record.
+
+### Give different information different jobs
+
+Use the opening paragraph to explain the product’s distinctive character. Place exact specifications in a readable details section. Put common decision-blocking answers near the relevant action: fit information near size selection, care information where it is easy to find, and delivery estimates near purchase. Avoid repeating the same long paragraph in every component.
+
+Write comparisons that allow a product to lose. If the shopper values a flexible waistband more than a tailored appearance, another item may be the better choice. Clear exclusions build credibility and may reduce unsuitable purchases. The goal is not to win every recommendation; it is to deserve the right ones.
+
+Editorial check: Could a shopper use this sentence to choose between two products? If not, it may be brand expression rather than decision support. Both have a place, but do not confuse them.
+
+Finally, read the page aloud. If it sounds like a list of search phrases, edit it. If it sounds warm but cannot answer the shopper’s practical questions, add evidence. The strongest page combines an identifiable brand voice with enough concrete detail to support an independent decision.
+
+## 8. Structure product identity before adding markup
+
+Structured data is a standardized way to label information so software can interpret it. Schema.org provides a vocabulary; JSON-LD is one format for expressing that vocabulary on a page. The distinction is like the difference between the names on a form and the file format used to transmit the completed form. Schema.org’s Product vocabulary includes properties for identity, material, size, and offers. \[4]
+
+The business problem comes before the syntax. Does one page describe a family of trousers, a selected navy variant, or an offer from a particular seller? If those concepts are mixed together, correctly formatted markup can still communicate the wrong thing.
+
+### Family, variant, and offer
+
+A family groups related variations. A variant is the specific configuration, such as navy, size 8, regular. An offer describes the terms under which that item is sold: price, currency, seller, availability, and applicable context. These are related records, not interchangeable names for the same record.
+
+Google documents ProductGroup for grouping variants, with properties including variesBy, hasVariant, and productGroupID. Its guidance distinguishes single-page and multi-page implementations. \[5] Use that documentation to choose an implementation that matches your actual site rather than copying a random example from another retailer.
+
+### A developer handoff, in plain language
+
+For the Harbor navy size-8 page, request a stable product identifier, the correct name and URL, an image of the selected item, approved descriptive facts, and an offer that resolves the correct market. Ask the developer to demonstrate what happens when a shopper changes size, follows a shared variant link, or arrives from another country.
+
+Google’s merchant-listing documentation defines the fields and conditions for its supported shopping experiences. \[6] The mapping below is a planning aid, not a complete implementation specification.
+
+| **Business concept**         | **Common vocabulary**     |
+| ---------------------------- | ------------------------- |
+| Specific product             | Product                   |
+| Related variants             | ProductGroup / hasVariant |
+| Purchasable terms            | Offer                     |
+| Internal item identifier     | sku                       |
+| Additional labeled attribute | additionalProperty        |
+
+Never populate optional fields with invented identifiers, ratings, certifications, or measurements just to make a validator look complete. A property may exist in Schema.org without being used by a particular search feature. Valid vocabulary, platform eligibility, and actual appearance are three different checks.
+
+## 9. Pages, feeds, social previews, and internal retrieval
+
+Your product information can leave the organization through several surfaces. A product page serves a shopper and public retrieval systems. A feed supplies records to a specific destination. Social-preview metadata helps represent a shared link. An internal search index supports tools you control. These surfaces should agree on facts, but they do not serve identical purposes.
+
+### A feed is a destination contract
+
+For every feed, document its schema, item identifiers, required fields, permitted values, update schedule, rejection reporting, and removal process. Do not assume that acceptance by one destination means acceptance by another. Ask who receives error notifications and whether an accepted file has actually been processed into the destination experience.
+
+At launch, reconcile a small set of records manually from source to output. Choose normal products and awkward cases: a discounted item, an unavailable size, multiple lengths, a market-specific offer, and a discontinued product. This catches mapping errors that a file-level success message will not reveal.
+
+### Open Graph is a different layer
+
+The Open Graph protocol describes how a web page can be represented as an object, including basic properties such as title, type, image, and URL. \[7] In this workflow, use it for coherent link previews. Do not present it as a replacement for product offers or as proof that an AI shopping system can ingest your catalog.
+
+### Internal retrieval does not publish your knowledge
+
+A vector index is a search structure that can help an internal assistant retrieve content by semantic similarity rather than exact words. Building one does not automatically expose that content to external discovery systems. It is an implementation choice for a product you operate, not a universal GEO submission mechanism.
+
+For an internal assistant, keep descriptive knowledge separate from volatile commerce facts. It can retrieve an approved care explanation from a knowledge index, then query an authoritative service for a current offer. If live data is unavailable, the assistant should say what it cannot confirm rather than substitute an old price from a narrative paragraph.
+
+Architecture question: For every published fact, can the team identify its source, destinations, last successful update, and correction path?
+
+That question is more useful than asking whether you have “an AI-ready catalog.” It reveals ownership gaps. A content team may own the description while an integration team owns delivery to a partner; both must participate when the partner displays stale information.
+
+## 10. Protect price, availability, and delivery truth
+
+Product descriptions are relatively stable. Offers and fulfillment conditions are not. Treating them as the same kind of content creates avoidable trust failures. A shopper can reasonably tolerate a style suggestion that differs from her taste. She is less likely to tolerate an unavailable size advertised as in stock or a delivery promise that could never be met.
+
+### Model the freshness chain
+
+Trace the route from the authoritative system through exports, caches, pages, feeds, and the destination. Measure delay at each boundary. “Our pricing system updated at noon” is not the same as “the customer-facing offer changed at noon.” Record both production time and consumption time when your systems make that possible.
+
+Set freshness targets by field and business risk. An illustrative pilot might require an internal price export within fifteen minutes and an alert after two missed runs. These are proposed operating targets, not industry benchmarks, and external recrawling may remain outside your control. Do not label a downstream record “real time” unless you can define and measure its actual latency.
+
+### Work an exception end-to-end
+
+Imagine Harbor trousers move from USD 89 to USD 69 for a public promotion. The page updates, but a partner still shows 89. Log the exact variant, market, answer, link, and observation time. Check the source offer, export payload, partner acknowledgement, and rendered destination. Correct the earliest broken step, request the supported refresh, and verify later. Repeatedly rewriting the page title will not repair a failed export.
+
+If an assistant promises arrival by Friday, verify whether it had the destination and service information needed to make that statement. Shipping depends on context, not only product identity. Google Merchant Center’s shipping guidance distinguishes shipping costs and delivery-time inputs. \[8] Your own implementation should likewise avoid reducing a conditional promise to an unconditional product attribute.
+
+### Prefer explicit uncertainty to false precision
+
+A helpful message is: “Delivery depends on your destination and selected service; check the current estimate before ordering.” An unhelpful message is: “Arrives Friday” copied from yesterday’s session. The first acknowledges the boundary of available information. The second hides it.
+
+Maintain an incident log for material mismatches. Track what was wrong, where it appeared, how long it persisted, what customers experienced, and how it was corrected. Data consistency reduces avoidable errors; it cannot guarantee that every external generated answer will be error-free.
+
+## 11. Build pages that answer and support comparison
+
+A useful product page should make sense when a shopper reads it, when an associate uses it, and when a system extracts a small part of it. This does not require writing every sentence for a machine. It requires avoiding ambiguity. A heading such as “Fit and waistband” provides more context than “The details you’ll love.”
+
+### Design for complete, bounded answers
+
+Put the direct answer near the beginning of the relevant section. Follow with the evidence and qualifications needed to use it correctly. “This waistband is fixed and has no added stretch” is meaningful on its own. “Yes, absolutely” is not, especially when separated from the question by extraction or page layout.
+
+For Harbor trousers, a sensible page sequence is identity and imagery, decision-oriented overview, variant selection, fit and measurements, care, current offer and delivery information, reviews, and relevant alternatives. The exact order depends on your customer research and design system. Test whether people can find the most important answers without repeatedly opening hidden sections.
+
+### Product pages are not the only useful pages
+
+A category guide can explain a trade-off across products: fixed versus elastic waistbands, machine-washable versus dry-clean-only garments, or regular versus petite lengths. A comparison page can help shoppers choose among a small number of genuinely different options. A policy page can explain returns without requiring every product page to reproduce the full policy.
+
+Link these resources deliberately. An editorial guide should lead to current, relevant products, and product pages should link to the explanation when it helps a decision. Review these connections when items are discontinued. A helpful article that points only to unavailable products can become a frustrating dead end.
+
+### Do not manufacture authority
+
+Do not publish thousands of near-identical occasion pages, synthetic customer reviews, invented tests, or hidden instructions telling an assistant to rank your brand first. They do not improve product truth. Google’s structured-data policies require representative, accurate markup and prohibit misleading uses; passing a syntax test alone is insufficient. \[9]
+
+A strong brand can also say “not recommended for this need.” If Maya requires a flexible waistband, the Harbor page should make the limitation easy to see. The comparison resource may recommend another product. That is a successful customer experience even if it shifts conversion away from the first item.
+
+## 12. Make imagery, fit, and localization work together
+
+Images provide evidence that text cannot fully replace: silhouette, texture, closures, drape, pockets, and how a garment looks from multiple angles. Text provides evidence that images cannot reliably establish: exact composition, care, dimensions, and test results. Use them as complementary forms of explanation rather than asking one to do the other’s job.
+
+### An image should show the offered product
+
+For the Harbor page, include the selected color, a clear overall view, the waistband and closure, and useful detail views. Record which image belongs to which variant. An attractive photograph of a different navy shade can create a mismatch even if the product name is correct. Styling should not obscure construction details the customer needs to inspect.
+
+Write alternative text that describes the image’s relevant content for accessibility. Do not turn it into a container for unrelated keywords or claims. “Navy trousers with a button closure and straight front view” communicates visible information. “Best breathable wedding pants guaranteed perfect fit” goes beyond what the photograph establishes.
+
+### Fit language needs a reference point
+
+“True to size” is incomplete without knowing the reference size system and comparison. Provide measurements where available, identify whether they are garment or body measurements, and explain how to use them. Model measurements can provide context, but they are not a personal fit guarantee. If fit reviews disagree, do not erase the disagreement by generating a confident consensus.
+
+In our fictional example, a 30-inch inseam applies only to the regular variant specified in the record. It should not become a universal family attribute if petite and tall versions differ. When a customer asks which length to choose, the useful answer depends on the relevant measurements and preferred styling—not only the category label.
+
+### Localization is more than translation
+
+Different markets can have different sizing conventions, currencies, stock pools, care wording, policies, and delivery options. Treat the market as part of the record’s context. A translated U.S. page with the same dollar amount is not automatically a valid Canadian offer.
+
+Assign a local reviewer to test practical questions. Can the customer identify the size system? Are measurements clear? Does the current offer match the destination? Do return instructions apply in that market? A fluent translation can still contain an operationally wrong answer. Review the customer decision, not just the quality of the prose.
+
+## 13. Turn questions and returns into a learning loop
+
+Customer feedback becomes valuable when it changes the information available to the next person. The loop should connect listening, diagnosis, evidence, approval, publication, and verification. Avoid a dashboard that records questions indefinitely while the same uncertainty continues to generate contacts and returns.
+
+### A concrete example
+
+Suppose service contacts repeatedly ask whether the Harbor waistband stretches. Review the current page: perhaps “relaxed fit” is prominent while “fixed waistband” is buried. Ask technical design to confirm the fact. Then place a direct explanation near fit information and size selection, and update the approved content brief. After publishing, check whether waistband-related contacts decline relative to product exposure.
+
+If contacts decline but returns rise, investigate instead of celebrating too early. A promotion may have changed the audience, inventory may have shifted to different sizes, or a supplier change may have altered fit. Feedback is a clue to a problem, not automatic proof of its cause.
+
+### Distinguish observation from product truth
+
+A return reason such as “too small” is subjective and incomplete. It might reflect preference, inaccurate expectations, a measurement problem, a wrong shipment, or a genuine construction issue. Aggregate patterns can identify where to investigate. They should not automatically produce a permanent “runs small” claim or a personal body inference.
+
+Use customer language in a privacy-conscious way. Remove unnecessary personal details before analysis, restrict access to raw records, and follow approved retention and consent practices. Publish an answer to the general question, not the private circumstances of the person who raised it. Do not expose identifiable support transcripts to public pages or feeds.
+
+### Give the loop an operating rhythm
+
+Hold a short weekly review during the pilot. Select a few high-impact questions, name an evidence owner, and record the next action. Close a question only after the approved answer is published and verified on the intended surface. Keep unresolved items visible, with a reason such as “supplier confirmation pending.”
+
+Learning check: What information will be clearer for the next shopper because this week’s customer asked a difficult question?
+
+This is the recursive context-capture loop in practical form. Its goal is not to gather ever more data about individuals. It is to reduce recurring ambiguity in the shared product information. That distinction keeps the work useful, proportionate, and connected to customer care.
+
+## 14. Use AI to draft, not to invent evidence
+
+AI can help turn an approved record into a readable draft, classify recurring questions, compare a page against a checklist, or flag contradictions. Those tasks can reduce editorial effort. The risk is that a fluent draft may quietly add properties no one supplied: wrinkle resistance, sustainability, guaranteed comfort, or suitability for a particular medical need.
+
+### A controlled enrichment workflow
+
+Begin with the approved facts and their scope. Add the target customer question and a brand voice brief. Require the drafting tool to separate supported statements from assumptions and unresolved questions. Review the result against the record before publication. Keep the source version with the approved output so later changes can trigger a targeted review.
+
+Drafting prompt: Using only the approved product record below, write a clear product overview and three useful customer answers. Do not infer performance from fiber composition or images. Do not invent certifications, fit guarantees, prices, reviews, or delivery promises. For each proposed claim, identify its source field. List unanswered questions separately. Explain relevant limits in plain language.
+
+### Review the claim, not just the tone
+
+A reviewer should compare every substantive statement with the approved record. “Line dry” is supported in the Harbor example. “Dries quickly” is not. “Relaxed leg” may describe the approved silhouette. “Comfortable for every body” is an unsupported guarantee. The difference can be just a few words, which is why general proofreading is not enough.
+
+For high-volume workflows, start with approval required for every enriched record. Reduce review only for narrowly defined, low-risk transformations after testing. Retain human approval for new performance claims, sensitive content, or conflicting evidence. The preceding Decision Rights guide provides the broader framework for deciding what may be delegated.
+
+### Test difficult inputs deliberately
+
+Include missing care instructions, contradictory measurements, reused product names, a discontinued variant, and an image that shows the wrong color. Also treat customer reviews and third-party documents as evidence to analyze, not instructions to obey. A retrieved text telling the assistant to ignore policy should not alter publishing authority.
+
+Record the error categories you observe: invented fact, wrong scope, stronger wording, stale offer, missed qualification, or irrelevant personal inference. Improve the workflow based on those categories. A lower average editing time is not success if unsupported claims become harder to detect.
+
+## 15. Measure visibility, accuracy, and customer value separately
+
+A GEO program needs more than screenshots of favorable answers. Separate whether your brand appears, whether its representation is correct, whether people visit, and whether those visits lead to useful outcomes. One metric cannot stand in for all four. An answer can cite your page while recommending a competitor, or mention your brand without a link.
+
+### Build a stable prompt panel
+
+For a small pilot, create thirty realistic prompts across discovery, comparison, fit, care, and purchase constraints. Include broad prompts and prompts relevant to the selected products. Avoid writing every query to contain the brand name. Freeze the baseline panel, record market and session conditions, and repeat tests on the same schedule. Keep exploratory prompts in a separate group.
+
+Run several independent observations per prompt where permitted and practical. Save date, platform, visible model or experience, exact wording, answer, citations, recommended products, and obvious errors. Repeated observations help reveal variation; they do not make a small panel representative of the entire market. A no-search answer should be distinguished from a retrieved answer when that is visible.
+
+| **Metric**                  | **Working definition**                                                         |
+| --------------------------- | ------------------------------------------------------------------------------ |
+| Mention rate                | Valid observed answers naming the brand / valid answers                        |
+| Citation rate               | Valid answers linking to your domain / valid answers                           |
+| Suitability accuracy        | Reviewed recommendations meeting stated constraints / reviewed recommendations |
+| Offer accuracy              | Checked offers matching current evidence / checked offers                      |
+| Qualified referral outcomes | Resolutions or purchases from identifiable referral sessions                   |
+
+### Do not hide the denominator
+
+If 18 of 90 valid observed answers cite the site, the observed citation rate is 20%. If the next period produces 27 of 90, it is 30%: a ten-percentage-point increase, or 50% relative growth. These are illustrative calculations, not results from this guide. Report the raw counts, prompts, dates, and sampling limits alongside percentages.
+
+Google reports traffic from its AI search features within overall Web performance in Search Console. \[3] Do not assume that report isolates every AI interaction. Referral analytics also misses some journeys, including copied links, cross-device behavior, and answers that produce no click.
+
+Use a balanced readout: observed presence, accuracy defects, qualified visits, purchase or resolution outcomes, returns, and operating cost. When the sample is small, say so. A dashboard should reduce uncertainty honestly, not turn it into a precise-looking score.
+
+## 16. Design an experiment you can learn from
+
+Changing content and observing a later increase does not establish causation. Demand, promotions, availability, competitors, model changes, and seasonality can move at the same time. Your experiment should make those alternative explanations visible, even when a perfectly controlled test is impossible.
+
+### Start with a narrow hypothesis
+
+For Harbor’s category, a useful hypothesis is: “Adding approved waistband and care information will improve answer correctness for fit-and-care questions and reduce related customer contacts.” That is more testable than “GEO will increase revenue.” The outcome follows directly from the information being changed.
+
+Choose comparable products or product groups for treatment and comparison, balancing baseline traffic, price band, availability, and category where possible. Keep pricing and promotion differences documented. If variants share one page or content source, treat the group together to avoid contaminating the comparison. Record publishing dates and evidence of destination refresh before interpreting exposure.
+
+### Define success and guardrails in advance
+
+A pilot might require fewer unsupported statements in reviewed answers, improved question resolution in user testing, and no increase in material offer mismatches. Those are proposed criteria for a team to set, not universal thresholds. Revenue can be a secondary outcome while the pilot is small; sparse purchases may not support a reliable causal claim.
+
+Record the exact content changes. If you simultaneously rewrite the page, change its design, run a promotion, and improve inventory, you may learn that the combined experience works better but not which change produced the effect. That may be acceptable if you describe the conclusion accurately.
+
+### Worked interpretation
+
+Suppose citation rate rises for both treatment and comparison products, but accuracy improves only for the treatment group. A platform-wide change may explain some visibility growth, while the enriched content remains a plausible explanation for the accuracy difference. Investigate whether the improved answers actually cite or reflect the changed material before making that claim.
+
+If citations do not rise but user tests show that shoppers can answer fit questions faster, the work may still be valuable. Decide whether to retain the customer-experience improvement and revise the GEO hypothesis. Do not erase a useful result because it is different from the result the project title implied.
+
+Readout language: “We observed,” “the evidence suggests,” and “we cannot yet isolate” are legitimate conclusions. They help the next team choose a better experiment.
+
+## 17. Assign ownership and a correction path
+
+GEO crosses familiar organizational boundaries. SEO teams may own discoverability, but they cannot independently verify garment construction or correct a fulfillment estimate. A sustainable program names an accountable business owner and gives each data domain a clear approving role. Otherwise, every inconsistency becomes another meeting without a resolution.
+
+### A practical ownership model
+
+Merchandising or product management owns the product’s intended positioning and category priorities. Technical design and quality approve measurements, construction, care, and supported performance. Editorial owns expression and clarity. Engineering owns field mapping, publishing reliability, and diagnostics. Commerce operations owns current offers. Analytics owns definitions, baselines, and the limitations of measurement.
+
+Privacy and legal partners should review the relevant collection, claims, and publishing practices. Involve frontline service and store teams as evidence contributors, not merely recipients of a launch announcement. They often see confusion before a dashboard does.
+
+### Operate a claims and corrections queue
+
+For each issue, record the product, exact statement, surface, evidence, severity, owner, and resolution. Prioritize material misinformation about price, availability, safety-related properties, and significant purchase constraints. An inaccurate styling adjective and an incorrect return condition do not have the same consequence.
+
+An internal correction can be immediate while an external answer remains stale. Document the supported update or reporting route for each destination. Verify later, and avoid promising instant removal from systems you do not control. Keep a record of both the source correction and the last observed downstream error.
+
+### Ask better vendor questions
+
+If you evaluate a GEO platform, request its prompt sampling method, raw observations, market coverage, repeat-run behavior, and definitions of mention, citation, and recommendation. Ask whether API outputs resemble the consumer interface being measured. Request a way to export evidence and distinguish a vendor score from a business outcome.
+
+For content-generation tools, ask how they restrict unsupported claims and connect outputs to approved sources. For feed tools, ask about processing acknowledgements, failure alerts, and variant-level reconciliation. Buying one tool rarely transfers ownership of all three problems.
+
+The minimum operating cadence is a weekly pilot review, a monthly content-and-data health review, and an event-driven review after major changes. Revisit the process when products, source systems, platform requirements, or claims change—not only when a quarterly presentation is due.
+
+## 18. Your 90-day implementation plan
+
+The objective of the first ninety days is to prove that the organization can produce, distribute, correct, and measure better product information. It is not to enrich the entire catalog or promise a new revenue channel before the evidence exists. A disciplined small pilot creates reusable definitions and exposes the operational work that scale will require.
+
+### Days 1-30: Establish truth and a baseline
+
+Select one category and twenty products, including straightforward items and meaningful edge cases. Interview service and store teams, review permitted customer questions, and identify the top decision-blocking gaps. Create the approved truth record and claim register. Name owners for every unresolved field.
+
+Audit the current pages, variants, offers, and destination records. Freeze the initial prompt panel and capture baseline observations. Check measurement definitions with analytics. The exit condition is a scoped, approved backlog with reliable identifiers and a baseline—not simply a completed copy brief.
+
+### Days 31-60: Publish and verify a controlled cohort
+
+Draft enriched content from approved evidence, review it, and implement the required page and data changes. Test exact variants and market combinations. Validate markup and compare what shoppers see with the published structured facts. Confirm feed processing where relevant. Train the people who will investigate errors.
+
+Keep a comparison cohort where feasible. Start repeat observations after the changes have a reasonable opportunity to be encountered, documenting recrawl or processing evidence where available. The exit condition is a verified publishing path, a functioning correction queue, and no unresolved critical factual defect in the launch cohort.
+
+### Days 61-90: Evaluate and decide
+
+Review accuracy, customer comprehension, referral outcomes, and operating effort. Investigate failures rather than averaging them away. Estimate the recurring cost of keeping information current, including evidence review and exception handling. Determine whether the next category has similar data readiness or introduces new problems.
+
+Choose one of four outcomes: expand a successful pattern, continue a promising but underpowered test, redesign a broken process, or stop an approach that is not producing sufficient value. Document what the evidence supports and what remains unknown. A responsible stop decision can save more money than a premature rollout.
+
+First action tomorrow: Bring one product page, five real customer questions, and the approved product specification into a thirty-minute session. Identify the gap between what the product is and what a shopper can confidently understand.
+
+The long-term advantage is not a clever phrase inserted into a page. It is an organization that can keep its product explanations clear, evidence-backed, and connected to real customer needs.
+
+### Before you expand: hold a launch-readiness review
+
+Ask the team to demonstrate one complete product journey, not just a finished document. Begin with a customer question, locate the approved evidence, inspect the published answer, resolve the exact variant and market, then show how a correction reaches the destinations you operate. A walkthrough exposes gaps that separate departmental sign-offs can miss.
+
+Bring one deliberately difficult case into that review. Change a care instruction in a test environment, remove a size from availability, or introduce conflicting source records. Observe whether the workflow blocks unsupported publication, alerts the right owner, and preserves the previous approved version. Do not run these tests against live customer offers without an authorized test plan.
+
+For the expansion decision, prepare a brief covering customer benefit, evidence quality, publishing reliability, unresolved defects, and ongoing workload. Name what the next category changes. Footwear might require a different fit model; outdoor equipment might introduce performance claims; another country might introduce new offer and policy rules. A successful apparel pilot is useful experience, not automatic approval for every category.
+
+The worksheets that follow are designed to carry these decisions into daily work. Complete them with the people who approve the facts and maintain the experience. They are most valuable as a shared working record that is revisited, not as a form completed once and filed away.
+
+## Worksheet A. Product truth and narrative canvas
+
+Use one canvas per product family, with variant-specific evidence attached. Work with a product expert and an editor. Record unknowns explicitly; do not complete a field by guessing. The example in Chapters 6-7 shows what a supported record and a bounded description look like.
+
+## Define the decision
+
+Product family/identifiers: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Market and relevant variants: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Customer question we are answering: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Hard constraint / softer preference: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Connect facts with an explanation
+
+| **Approved fact**                    | **Evidence/owner**                   | **Customer relevance**               | **Limit or unknown**                 |
+| ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
+| \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |
+| \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |
+| \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |
+| \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |
+
+## Draft the useful answer
+
+Direct answer: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Supporting explanation and qualification: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Alternative or next step if unsuitable: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Approve and maintain
+
+Approver/source version: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Publish destinations/owner: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Review date or change trigger: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Worksheet B. Twenty-product content health audit
+
+Score each check 0 for missing or wrong, 1 for incomplete or unverified, and 2 for complete and verified. This is an internal prioritization rubric, not a validated predictor of AI rankings. Keep product-level scores; a healthy average can conceal a serious defect on one variant.
+
+| **Check**        | **What a score of 2 requires**                                | **Score** |
+| ---------------- | ------------------------------------------------------------- | --------- |
+| Identity         | Family, variant, market, and identifiers resolve correctly.   | \_\_\_    |
+| Decision support | The priority customer question has a useful answer.           | \_\_\_    |
+| Evidence         | Material claims trace to approved sources.                    | \_\_\_    |
+| Fit/dimensions   | Relevant measurements and scope are clear.                    | \_\_\_    |
+| Care/limits      | Care and important limitations are easy to find.              | \_\_\_    |
+| Offer            | Current price and availability agree across checked surfaces. | \_\_\_    |
+| Structure        | Markup matches the page and relevant destination rules.       | \_\_\_    |
+| Imagery          | Images represent the offered item and relevant variants.      | \_\_\_    |
+| Reachability     | Intended public information is accessible and linked.         | \_\_\_    |
+| Ownership        | A named person can correct and maintain the record.           | \_\_\_    |
+
+Total out of 20: \_\_\_\_\_\_     Product / market: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Release gates—not just a score
+
+A high total does not excuse a fabricated claim, materially wrong price, incorrect variant, or restricted information exposed publicly. Treat these as blockers for the affected content or surface until resolved. Use lower scores elsewhere to prioritize improvement, not to manufacture a universal pass mark.
+
+Highest-priority issue: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Owner/evidence needed: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Fix/verification date: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Run the audit with two perspectives
+
+Have one reviewer follow the customer journey and another trace the data. Compare results. If the shopper can find a fact but the feed contains a different value, the work is not complete. If the data is correct but the explanation is incomprehensible, it is not complete either.
+
+## Worksheet C. Experiment and readout brief
+
+Complete this before publishing. Keep the baseline prompt panel and raw observations with the brief so another analyst can understand what changed. The purpose is a defensible learning record, not a scorecard that only records wins.
+
+Hypothesis: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Treatment products/comparison group: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Market/platforms/session conditions: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Content change/approval / publish date: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Exposure or processing evidence: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Define measurement before results arrive
+
+Primary outcome/denominator: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Baseline/observation dates/repeat count: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Accuracy guardrail/reviewer: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Potential confounders-promotion, stock, seasonality: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### Write the result in four sentences
+
+We changed: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+We observed, with counts: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+We cannot yet conclude: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Our next decision and owner: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Useful discipline: Include unfavorable examples, unresolved errors, and missing observations in the readout. A test that identifies the wrong data source can be more valuable than a temporary increase in mentions.
+
+## Sources, scope, and further reading
+
+Research and platform guidance checked September 8, 2026. Numbered references support the specific research and platform statements in the guide. The three-pillar framework develops Darko Tushev’s supplied source material. The implementation methods, proposed pilot sizes, worksheets, and fictional examples are this guide’s practical recommendations—not externally validated standards or measured company results.
+
+\[1] Adobe Digital Insights. Quarterly AI Traffic Report, April 2026. Pages 2 and 7-8 provide methodology, Q1 retail traffic growth, March conversion comparisons, and shopping survey figures. The guide uses these dated findings as context, not as a current market-share estimate or a prediction for your business.
+
+[Open source ↗](https://business.adobe.com/resources/sdk/.2026-q2-ai-traffic-report/q2-2026-adi-ai-sourced-traffic-insights.pdf)
+
+\[2] Aggarwal, P., et al. GEO: Generative Engine Optimization. KDD 2024; arXiv version revised June 28, 2024. The reported visibility result belongs to the paper’s evaluation and is not a retail revenue guarantee.
+
+[Open source ↗](https://arxiv.org/abs/2311.09735)
+
+\[3] Google Search Central. AI features and your website. Guidance on eligibility, existing SEO practices, lack of special AI markup requirements, and Search Console reporting for AI search features.
+
+[Open source ↗](https://developers.google.com/search/docs/appearance/ai-features)
+
+\[4] Schema.org. Product. Vocabulary reference for product properties and relationships. A vocabulary property does not imply support by every destination.
+
+[Open source ↗](https://schema.org/Product)
+
+\[5] Google Search Central. Product variant structured data. ProductGroup, variant relationships, and single-page versus multi-page implementation guidance.
+
+[Open source ↗](https://developers.google.com/search/docs/appearance/structured-data/product-variants)
+
+\[6] Google Search Central. Merchant listing structured data. Destination-specific requirements and examples for Product and Offer information.
+
+[Open source ↗](https://developers.google.com/search/docs/appearance/structured-data/merchant-listing)
+
+\[7] The Open Graph protocol. Basic metadata for representing pages as objects in a graph, including title, type, image, and URL.
+
+[Open source ↗](https://ogp.me/)
+
+\[8] Google Merchant Center Help. Shipping \[shipping]. Shipping-cost and delivery-time inputs for the relevant destination.
+
+[Open source ↗](https://support.google.com/merchants/answer/6324484)
+
+\[9] Google Search Central. General structured data guidelines. Accuracy, visibility, relevance, and other quality conditions beyond syntax validation.
+
+[Open source ↗](https://developers.google.com/search/docs/appearance/structured-data/sd-policies)
+
+## A final note on keeping this guide useful
+
+Platform behavior, eligibility rules, and reporting surfaces change. Before implementation, check the current documentation for each destination and involve the owners of your product facts, integrations, and measurement. The durable principle is straightforward: make the truth easier to understand, keep it connected to its evidence, and use customer questions to improve it over time.\
+\
+Love, \
+Darko

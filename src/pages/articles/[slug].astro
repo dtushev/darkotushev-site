@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NewsletterCTA from '../../components/NewsletterCTA.astro';
+import { getCollection, render } from 'astro:content';
+
+// 1. Generate a page for every single article in your filing cabinet
+export async function getStaticPaths() {
+  const allArticles = await getCollection('articles');
+  
+  return allArticles.map((article) => ({
+    // We pass the article's unique ID to match the URL
+    params: { slug: article.id }, 
+    props: { article },
+  }));
+}
+
+// 2. Grab the specific article and render its Markdown content
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<Layout title={`${article.data.title} | Darko Tushev`} description={article.data.description}>
+	<article class="flex flex-col items-start justify-center pt-10 pb-20 max-w-3xl mx-auto w-full">
+		
+		<a href="/articles" class="text-sm font-medium text-[#52525B] dark:text-[#A1A1AA] hover:text-[#18181B] dark:hover:text-[#F4F4F5] transition-colors mb-8">
+			&larr; Back to Articles
+		</a>
+        
+		<div class="mb-10 w-full border-b border-gray-200 dark:border-gray-800 pb-8">
+			<h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#18181B] dark:text-[#F4F4F5] mb-6">
+				{article.data.title}
+			</h1>
+			
+			<div class="flex items-center gap-4 text-sm text-[#52525B] dark:text-[#A1A1AA]">
+				<time datetime={article.data.publishDate.toISOString()}>
+					{article.data.publishDate.toLocaleDateString('en-US', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})}
+				</time>
+				<div class="flex gap-2">
+					{article.data.tags.map((tag: string) => (
+						<span class="bg-gray-100 dark:bg-[#27272A] px-2 py-0.5 rounded-md text-xs font-medium text-[#18181B] dark:text-[#F4F4F5]">{tag}</span>
+					))}
+				</div>
+			</div>
+		</div>
+
+		<!-- This is where your Markdown content actually gets injected! -->
+		<div class="w-full prose prose-lg dark:prose-invert prose-zinc max-w-none">
+			<Content />
+		</div>
+		
+		<!-- Our New Newsletter Block -->
+		<NewsletterCTA />
+		
+	</article>
+</Layout>

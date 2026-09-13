@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// 1. Fetch all articles from our "filing cabinet"
+const allArticles = await getCollection('articles');
+
+// 2. Sort them by date (newest first)
+const sortedArticles = allArticles.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+
+<Layout title="Articles | Darko Tushev" description="Field notes on Enterprise AI and Agentic Commerce.">
+	<div class="flex flex-col items-start justify-center pt-10">
+		<h1 class="text-4xl font-bold tracking-tight mb-8">
+			Articles
+		</h1>
+		
+		<!-- This loops through every article and builds a card for it -->
+		<div class="w-full flex flex-col gap-10">
+			{sortedArticles.map((article) => (
+				<article class="flex flex-col gap-2">
+					<a href={`/articles/${article.id}`} class="group">
+						<h2 class="text-2xl font-semibold text-[#18181B] dark:text-[#F4F4F5] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+							{article.data.title}
+						</h2>
+					</a>
+					
+					<div class="flex items-center gap-4 text-sm text-[#52525B] dark:text-[#A1A1AA]">
+						<time datetime={article.data.publishDate.toISOString()}>
+							{article.data.publishDate.toLocaleDateString('en-US', {
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric'
+							})}
+						</time>
+						<div class="flex gap-2">
+							{article.data.tags.map((tag: string) => (
+								<span class="bg-gray-200 dark:bg-[#27272A] px-2 py-0.5 rounded-md text-xs font-medium text-[#18181B] dark:text-[#F4F4F5]">{tag}</span>
+							))}
+						</div>
+					</div>
+					
+					<p class="text-[#52525B] dark:text-[#A1A1AA] mt-2 leading-relaxed">
+						{article.data.description}
+					</p>
+				</article>
+			))}
+		</div>
+	</div>
+</Layout>

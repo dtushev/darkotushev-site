@@ -1,0 +1,228 @@
+---
+---
+<div class="my-16 w-full bg-white dark:bg-[#09090B] border border-gray-200 dark:border-gray-800 rounded-[2.5rem] p-6 md:p-12 shadow-2xl transition-colors font-sans">
+    
+    <!-- Friendly Header & Toggle -->
+    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-10">
+        <div class="max-w-2xl">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-[#18181B] dark:text-[#F4F4F5] mb-4 tracking-tight">
+                The "How I Explain This To My Wife" Architecture ☕
+            </h3>
+            <p class="text-lg text-[#52525B] dark:text-[#A1A1AA] leading-relaxed">
+                A visual guide to how we stop building clunky websites and start building smart, traveling loyalty engines. 
+            </p>
+        </div>
+        
+        <!-- Massive, Accessible Pill Toggle -->
+        <button id="strategy-toggle" class="relative flex items-center bg-gray-100 dark:bg-[#18181B] border-[3px] border-blue-500 rounded-full cursor-pointer transition-colors focus:outline-none focus:ring-4 focus:ring-blue-500/30 h-16 w-[340px] flex-shrink-0 shadow-sm overflow-hidden z-30">
+            <!-- Gliding Background Pill -->
+            <div id="switch-bg" class="absolute left-1 top-1 bottom-1 w-[48%] bg-blue-500 rounded-full transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] shadow-md"></div>
+            
+            <div class="relative flex w-full text-center z-10">
+                <span id="label-legacy" class="w-1/2 text-sm font-bold text-white transition-colors duration-300 tracking-wide">🍝 The Spaghetti</span>
+                <span id="label-agentic" class="w-1/2 text-sm font-bold text-gray-500 dark:text-gray-400 transition-colors duration-300 tracking-wide">🚀 The A-Team</span>
+            </div>
+        </button>
+    </div>
+
+    <!-- Humorous Vibe Check Console -->
+    <div class="flex flex-wrap gap-6 mb-8 text-sm font-medium bg-gray-50 dark:bg-[#121214] p-5 rounded-2xl border border-gray-200 dark:border-gray-800 w-full shadow-inner">
+        <div class="flex flex-col">
+            <span class="text-gray-400 text-xs uppercase tracking-wider mb-1">Current Vibe:</span>
+            <span id="tel-vibe" class="text-red-500 font-bold">Absolute Chaos (Everyone is stressed)</span>
+        </div>
+        <div class="w-px bg-gray-300 dark:bg-gray-700 hidden md:block"></div>
+        <div class="flex flex-col">
+            <span class="text-gray-400 text-xs uppercase tracking-wider mb-1">Customer Experience:</span>
+            <span id="tel-cx" class="text-[#18181B] dark:text-[#F4F4F5] font-semibold">"Who are you again?"</span>
+        </div>
+        <div class="w-px bg-gray-300 dark:bg-gray-700 hidden md:block"></div>
+        <div class="flex flex-col">
+            <span class="text-gray-400 text-xs uppercase tracking-wider mb-1">When things break:</span>
+            <span id="tel-crash" class="text-red-500 font-semibold">The CEO finds out on Twitter</span>
+        </div>
+    </div>
+
+    <!-- The Interactive Canvas -->
+    <div class="relative w-full aspect-[4/3] md:aspect-[16/9] bg-[#F8FAFC] dark:bg-[#09090B] rounded-[2rem] border border-gray-200 dark:border-gray-800 overflow-hidden shadow-inner flex items-center justify-center">
+        
+        <div class="absolute inset-0 opacity-20 dark:opacity-10" style="background-image: radial-gradient(circle at 2px 2px, #94a3b8 1px, transparent 0); background-size: 32px 32px;"></div>
+
+        <style>
+            @keyframes pulse-flow { 0% { stroke-dashoffset: 100; } 100% { stroke-dashoffset: 0; } }
+            @keyframes pulse-ring { 0% { transform: scale(0.95); opacity: 0.5; } 50% { transform: scale(1.02); opacity: 1; } 100% { transform: scale(0.95); opacity: 0.5; } }
+            .flow-slow { stroke-dasharray: 8 16; animation: pulse-flow 3s linear infinite; }
+            .flow-fast { stroke-dasharray: 12 24; animation: pulse-flow 1s linear infinite; }
+            .loyalty-ring { animation: pulse-ring 4s ease-in-out infinite; transform-origin: center; }
+        </style>
+
+        <svg viewBox="0 0 1600 1000" class="absolute w-full h-full max-w-[100rem] z-20 text-[#18181B] dark:text-[#F4F4F5]">
+            
+            <!-- THE CHANNELS (Top Row) -->
+            <g transform="translate(150, 100)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">🛍️ Web Store</text></g>
+            <g transform="translate(580, 100)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">📱 Meta / IG</text></g>
+            <g transform="translate(1010, 100)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">🎵 TikTok Shop</text></g>
+            <g transform="translate(1440, 100)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">🤖 Google (GEO)</text></g>
+
+            <!-- THE BACKEND (Bottom & Sides) -->
+            <g transform="translate(150, 450)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">Zendesk (Support)</text></g>
+            <g transform="translate(1440, 450)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">Loyalty Database</text></g>
+            
+            <g transform="translate(365, 850)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">SAP (Finance)</text></g>
+            <g transform="translate(800, 850)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">Warehouse (3PL)</text></g>
+            <g transform="translate(1235, 850)"><rect x="-80" y="-30" width="160" height="60" rx="12" class="fill-white dark:fill-gray-900 stroke-gray-200 dark:stroke-gray-700 stroke-2"/><text x="0" y="5" text-anchor="middle" class="text-[13px] font-bold fill-current">Product Catalog</text></g>
+
+            <!-- ========================================== -->
+            <!-- STATE 1: THE SPAGHETTI                     -->
+            <!-- ========================================== -->
+            <g id="diagram-legacy" class="transition-opacity duration-700 opacity-100">
+                <!-- Messy Lines -->
+                <path d="M 150 130 Q 300 500 365 820" fill="none" class="stroke-gray-400 dark:stroke-gray-600" stroke-width="2"/>
+                <path d="M 580 130 Q 700 500 1235 820" fill="none" class="stroke-gray-400 dark:stroke-gray-600" stroke-width="2"/>
+                <path d="M 1010 130 Q 800 500 150 420" fill="none" class="stroke-gray-400 dark:stroke-gray-600" stroke-width="2"/>
+                <path d="M 1440 130 Q 1000 500 800 820" fill="none" class="stroke-gray-400 dark:stroke-gray-600" stroke-width="2"/>
+                <path d="M 150 480 Q 800 600 1440 480" fill="none" class="stroke-gray-400 dark:stroke-gray-600" stroke-width="2"/>
+                <path d="M 365 820 Q 800 500 1440 480" fill="none" class="stroke-gray-400 dark:stroke-gray-600" stroke-width="2"/>
+
+                <!-- Humorous Friction Points -->
+                <path d="M 150 130 Q 600 300 1440 420" fill="none" class="stroke-red-400 stroke-dasharray-[8_8] flow-slow" stroke-width="4"/>
+                <g transform="translate(800, 250)">
+                    <circle cx="0" cy="0" r="50" class="fill-red-50 dark:fill-red-900/50 stroke-red-400 stroke-2"/>
+                    <text x="0" y="-8" text-anchor="middle" class="text-[12px] font-bold fill-red-600 dark:fill-red-400">LOST</text>
+                    <text x="0" y="8" text-anchor="middle" class="text-[12px] font-bold fill-red-600 dark:fill-red-400">LOYALTY PTS</text>
+                </g>
+
+                <path d="M 580 130 Q 500 600 800 820" fill="none" class="stroke-orange-400 stroke-dasharray-[8_8] flow-slow" stroke-width="4"/>
+                <g transform="translate(600, 550)">
+                    <circle cx="0" cy="0" r="55" class="fill-orange-50 dark:fill-orange-900/50 stroke-orange-400 stroke-2"/>
+                    <text x="0" y="-8" text-anchor="middle" class="text-[12px] font-bold fill-orange-600 dark:fill-orange-400">BOB'S MANUAL</text>
+                    <text x="0" y="8" text-anchor="middle" class="text-[12px] font-bold fill-orange-600 dark:fill-orange-400">CSV EXPORT</text>
+                </g>
+            </g>
+
+            <!-- ========================================== -->
+            <!-- STATE 2: THE A-TEAM + TRAVELING LOYALTY    -->
+            <!-- ========================================== -->
+            <g id="diagram-agentic" class="transition-opacity duration-700 opacity-0 pointer-events-none">
+                
+                <!-- The Traveling Loyalty Layer (Enveloping the top channels) -->
+                <rect x="50" y="40" width="1500" height="120" rx="40" class="fill-blue-500/5 stroke-blue-400/50 stroke-2 stroke-dasharray-[8_8] loyalty-ring"/>
+                <text x="800" y="180" text-anchor="middle" class="text-[14px] font-bold fill-blue-600 dark:fill-blue-400 uppercase tracking-widest bg-white dark:bg-black px-4 rounded-full">✨ Universal Traveling Loyalty Layer ✨</text>
+
+                <!-- Clean Data Flow to Center Core -->
+                <path d="M 800 200 L 800 350" fill="none" class="stroke-blue-500 flow-fast" stroke-width="4"/>
+                <path d="M 150 480 Q 400 500 600 500" fill="none" class="stroke-blue-500 flow-fast" stroke-width="3"/>
+                <path d="M 1440 480 Q 1200 500 1000 500" fill="none" class="stroke-blue-500 flow-fast" stroke-width="3"/>
+                <path d="M 365 820 L 600 650" fill="none" class="stroke-blue-500 flow-fast" stroke-width="3"/>
+                <path d="M 800 820 L 800 650" fill="none" class="stroke-blue-500 flow-fast" stroke-width="3"/>
+                <path d="M 1235 820 L 1000 650" fill="none" class="stroke-blue-500 flow-fast" stroke-width="3"/>
+
+                <!-- The Master Router & Agents -->
+                <g transform="translate(800, 500)">
+                    <circle cx="0" cy="0" r="150" class="fill-blue-100/20 dark:fill-blue-900/10 stroke-blue-400 stroke-1 stroke-dasharray-[4_4] animate-[spin_20s_linear_infinite]"/>
+                    
+                    <rect x="-70" y="-70" width="140" height="140" rx="30" class="fill-white dark:fill-[#18181B] stroke-blue-600 stroke-[3] drop-shadow-[0_0_30px_rgba(37,99,235,0.4)]"/>
+                    <text x="0" y="-5" text-anchor="middle" class="text-[18px] font-extrabold fill-blue-700 dark:fill-blue-400 uppercase tracking-widest">AI Master</text>
+                    <text x="0" y="15" text-anchor="middle" class="text-[18px] font-extrabold fill-blue-700 dark:fill-blue-400 uppercase tracking-widest">Router</text>
+
+                    <!-- Sub Agents -->
+                    <g transform="translate(-160, 0)">
+                        <circle cx="0" cy="0" r="45" class="fill-purple-50 dark:fill-purple-900/40 stroke-purple-500 stroke-2"/>
+                        <text x="0" y="-5" text-anchor="middle" class="text-[12px] font-bold fill-purple-700 dark:fill-purple-300">CX / Support</text>
+                        <text x="0" y="10" text-anchor="middle" class="text-[12px] font-bold fill-purple-700 dark:fill-purple-300">Agent</text>
+                    </g>
+                    <g transform="translate(160, 0)">
+                        <circle cx="0" cy="0" r="45" class="fill-teal-50 dark:fill-teal-900/40 stroke-teal-500 stroke-2"/>
+                        <text x="0" y="-5" text-anchor="middle" class="text-[12px] font-bold fill-teal-700 dark:fill-teal-300">Identity</text>
+                        <text x="0" y="10" text-anchor="middle" class="text-[12px] font-bold fill-teal-700 dark:fill-teal-300">Agent</text>
+                    </g>
+                    <g transform="translate(0, 160)">
+                        <circle cx="0" cy="0" r="45" class="fill-green-50 dark:fill-green-900/40 stroke-green-500 stroke-2"/>
+                        <text x="0" y="-5" text-anchor="middle" class="text-[12px] font-bold fill-green-700 dark:fill-green-300">Ops / Finance</text>
+                        <text x="0" y="10" text-anchor="middle" class="text-[12px] font-bold fill-green-700 dark:fill-green-300">Agent</text>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <!-- Friendly, Non-Salesy Explanation -->
+    <div class="mt-12 space-y-6">
+        <p class="text-xl text-[#18181B] dark:text-[#F4F4F5] font-medium">
+            I'm not trying to sell you a software package. I just want to show you how I look at modern commerce.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 dark:bg-[#121214] p-6 rounded-2xl border border-gray-200 dark:border-gray-800">
+                <h4 class="text-lg font-bold text-[#18181B] dark:text-[#F4F4F5] mb-3 flex items-center gap-2">
+                    <span>🍝</span> The 95% Reality (The Spaghetti)
+                </h4>
+                <p class="text-[#52525B] dark:text-[#A1A1AA] text-sm leading-relaxed">
+                    Look at the first view. This is how almost everyone operates today. It’s a fragile web of expensive tools that hate talking to each other. When someone buys a shirt, a nightmare of duct-tape scripts and manual CSV uploads (usually handled by Bob in accounting) desperately tries to fulfill the order. If they buy from TikTok instead of your website, they are treated like a total stranger.
+                </p>
+            </div>
+            <div class="bg-blue-50 dark:bg-blue-900/10 p-6 rounded-2xl border border-blue-100 dark:border-blue-900/30">
+                <h4 class="text-lg font-bold text-blue-700 dark:text-blue-400 mb-3 flex items-center gap-2">
+                    <span>🚀</span> Traveling Loyalty (The A-Team)
+                </h4>
+                <p class="text-[#52525B] dark:text-[#A1A1AA] text-sm leading-relaxed">
+                    We aren't just replacing broken pipes; we are changing what a website is. By dropping an AI Master Router in the middle, we create a <strong>Universal Traveling Loyalty Layer</strong>. Now, through GEO (Generative Engine Optimization) and headless commerce, your customer’s identity travels with them. Whether they check out on TikTok, Meta, or Google, our agents know exactly who they are. They are always <em>your</em> customer.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const toggle = document.getElementById('strategy-toggle');
+    const switchBg = document.getElementById('switch-bg');
+    const labelLegacy = document.getElementById('label-legacy');
+    const labelAgentic = document.getElementById('label-agentic');
+    const diagramLegacy = document.getElementById('diagram-legacy');
+    const diagramAgentic = document.getElementById('diagram-agentic');
+    
+    const telVibe = document.getElementById('tel-vibe');
+    const telCx = document.getElementById('tel-cx');
+    const telCrash = document.getElementById('tel-crash');
+    
+    let isAgentic = false;
+
+    if (toggle && switchBg) {
+        toggle.addEventListener('click', () => {
+            isAgentic = !isAgentic;
+            
+            if (isAgentic) {
+                switchBg.style.transform = 'translateX(100%)';
+                labelLegacy.classList.replace('text-white', 'text-gray-500');
+                labelLegacy.classList.replace('text-white', 'dark:text-gray-400');
+                labelAgentic.classList.replace('text-gray-500', 'text-white');
+                labelAgentic.classList.replace('dark:text-gray-400', 'text-white');
+                
+                diagramLegacy.classList.replace('opacity-100', 'opacity-0');
+                diagramAgentic.classList.replace('opacity-0', 'opacity-100');
+
+                telVibe.innerText = "Smooth & Symphonic 🎵";
+                telVibe.className = "text-blue-600 dark:text-blue-400 font-bold";
+                telCx.innerText = `"Welcome back! We saved your points."`;
+                telCx.className = "text-blue-600 dark:text-blue-400 font-semibold italic";
+                telCrash.innerText = "Auto-healed by the Support Agent";
+                telCrash.className = "text-blue-600 dark:text-blue-400 font-semibold";
+            } else {
+                switchBg.style.transform = 'translateX(0)';
+                labelLegacy.classList.replace('text-gray-500', 'text-white');
+                labelLegacy.classList.replace('dark:text-gray-400', 'text-white');
+                labelAgentic.classList.replace('text-white', 'text-gray-500');
+                labelAgentic.classList.replace('text-white', 'dark:text-gray-400');
+                
+                diagramLegacy.classList.replace('opacity-0', 'opacity-100');
+                diagramAgentic.classList.replace('opacity-100', 'opacity-0');
+
+                telVibe.innerText = "Absolute Chaos (Everyone is stressed)";
+                telVibe.className = "text-red-500 font-bold";
+                telCx.innerText = `"Who are you again?"`;
+                telCx.className = "text-[#18181B] dark:text-[#F4F4F5] font-semibold";
+                telCrash.innerText = "The CEO finds out on Twitter";
+                telCrash.className = "text-red-500 font-semibold";
+            }
+        });
+    }
+</script>

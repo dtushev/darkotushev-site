@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Fetch the latest field notes for the grid
+const allArticles = await getCollection('articles');
+const latestArticles = allArticles
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 4);
+
+// Build the Search Index (Articles + Library Frameworks)
+const searchIndex = allArticles.map(article => ({
+    title: article.data.title,
+    description: article.data.description,
+    url: `/articles/${article.id}`,
+    category: 'Field Note'
+}));
+
+// Manually adding your core library frameworks to the search index
+searchIndex.push(
+    {
+        title: "The Innovator's Dilemma",
+        description: "Understanding sustaining versus disruptive innovation in Enterprise AI.",
+        url: "/library",
+        category: "Library / Mental Model"
+    },
+    {
+        title: "Good Strategy Bad Strategy",
+        description: "How to diagnose challenges and focus overwhelming leverage.",
+        url: "/library",
+        category: "Library / Executive Leadership"
+    },
+    {
+        title: "Contact & Advisory",
+        description: "Get in touch for enterprise AI strategy and consulting.",
+        url: "/contact",
+        category: "Contact"
+    }
+);
+---
+
+<Layout title="Darko Tushev | Tech, AI & Dogs" description="Hi, I'm Darko. I'm passionate about what technology can do to help people.">
+    
+    <section class="py-12 md:py-16">
+        <img 
+            src="/beach-photo.jpg" 
+            alt="Me and my dogs having a blast on the beach" 
+            class="w-full aspect-[21/9] md:aspect-[3/1] object-cover rounded-3xl border border-gray-300 dark:border-gray-700 mb-10 shadow-sm bg-gray-200 dark:bg-gray-800"
+        />
+
+        <div class="max-w-3xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#18181B] dark:text-[#F4F4F5] leading-tight mb-6">
+                <span id="dynamic-greeting">Hello!</span> I am Darko. 👋
+            </h1>
+            <p class="text-xl md:text-2xl text-[#52525B] dark:text-[#A1A1AA] leading-relaxed mb-6 font-medium">
+                I am a <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-yellow-200 dark:before:bg-blue-900/40"><span class="relative text-[#18181B] dark:text-[#F4F4F5] font-semibold">glass-half-full AI Strategist</span></span> helping enterprise teams embrace the future without losing their humanity. By day, I lead AI strategy at Gap Inc. By night, I am building tools for my family and running on the beach with my dog, Nemo.
+            </p>
+            <p class="text-lg text-[#52525B] dark:text-[#A1A1AA] leading-relaxed">
+                This little corner of the internet is my personal digital front porch. No consulting pitches, no jargon. It is just a place where I share what I am learning, the side projects I am building, and the ways I think AI can make our lives a little bit easier (and a lot more fun).
+            </p>
+        </div>
+    </section>
+
+    <!-- STRATEGIC CONCIERGE SEARCH UI -->
+     
+    <section class="py-8 border-t border-gray-200 dark:border-gray-800 z-40 relative">
+        <div class="relative max-w-3xl mx-auto group">
+            <!-- Ambient Glow Effect -->
+            <div class="absolute inset-0 bg-blue-500/20 dark:bg-blue-400/20 blur-xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            
+            <!-- The Search Bar -->
+            <div class="relative flex items-center bg-white dark:bg-[#18181B] border border-gray-200 dark:border-gray-700 rounded-2xl p-2 shadow-sm focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent transition-all z-10">
+                <span class="pl-4 pr-2 text-xl">💡</span>
+                <input 
+                    type="text" 
+                    id="global-search-input"
+                    autocomplete="off"
+                    placeholder="Search articles, frameworks, library, or contact info..." 
+                    class="w-full bg-transparent text-[#18181B] dark:text-[#F4F4F5] placeholder-gray-400 dark:placeholder-gray-500 py-3 px-2 outline-none text-lg"
+                />
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-xl transition-colors">
+                    Search
+                </button>
+            </div>
+
+            <!-- The Search Results Dropdown -->
+            <div id="search-results" class="absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#18181B] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl opacity-0 invisible transition-all duration-200 z-50 max-h-96 overflow-y-auto">
+                <!-- Results inject here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 border-t border-gray-200 dark:border-gray-800">
+        <h2 class="text-sm font-bold text-[#2C7A7B] dark:text-[#4FD1C5] uppercase tracking-widest mb-6">
+            What to Expect Here
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-white dark:bg-[#09090B] shadow-sm hover:shadow-md hover:border-blue-200 dark:hover:border-blue-900 transition-all">
+                <div class="text-3xl mb-4">🚀</div>
+                <h4 class="text-lg font-bold text-[#18181B] dark:text-[#F4F4F5] mb-2">Tech for Good</h4>
+                <p class="text-[#52525B] dark:text-[#A1A1AA] text-sm leading-relaxed">I believe AI shouldn't be intimidating. I focus on the pragmatic, helpful side of technology that actually makes a difference in our day-to-day routines.</p>
+            </div>
+            
+            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-white dark:bg-[#09090B] shadow-sm hover:shadow-md hover:border-blue-200 dark:hover:border-blue-900 transition-all">
+                <div class="text-3xl mb-4">🧭</div>
+                <h4 class="text-lg font-bold text-[#18181B] dark:text-[#F4F4F5] mb-2">Strategic Guidance</h4>
+                <p class="text-[#52525B] dark:text-[#A1A1AA] text-sm leading-relaxed">
+I share the everyday tools, workflows, and books that help me make sense of new technology. Since no one has it all figured out yet, I am just sharing my notes as I go so we can navigate it together.                </p>
+            </div>
+            
+            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-white dark:bg-[#09090B] shadow-sm hover:shadow-md hover:border-blue-200 dark:hover:border-blue-900 transition-all">
+                <div class="text-3xl mb-4">🐕</div>
+                <h4 class="text-lg font-bold text-[#18181B] dark:text-[#F4F4F5] mb-2">Life Offline</h4>
+                <p class="text-[#52525B] dark:text-[#A1A1AA] text-sm leading-relaxed">I love the digital world, but my favorite place is offline. If I am not at my desk, I am probably out running on the beach with my two dogs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 border-t border-gray-200 dark:border-gray-800">
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-sm font-bold text-[#2C7A7B] dark:text-[#4FD1C5] uppercase tracking-widest">
+                Recent Field Notes
+            </h2>
+            <a href="/articles" class="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline transition-all">
+                View all &rarr;
+            </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {latestArticles.map((article) => (
+                <article class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl hover:border-gray-300 dark:hover:border-gray-700 transition-colors bg-white dark:bg-[#09090B] shadow-sm">
+                    <a href={`/articles/${article.id}`} class="block group">
+                        <h3 class="text-xl font-semibold text-[#18181B] dark:text-[#F4F4F5] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3">
+                            {article.data.title}
+                        </h3>
+                        <p class="text-[#52525B] dark:text-[#A1A1AA] text-sm leading-relaxed mb-6 line-clamp-2">
+                            {article.data.description}
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-medium text-[#52525B] dark:text-[#A1A1AA]">
+                                {article.data.publishDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                            </span>
+                        </div>
+                    </a>
+                </article>
+            ))}
+        </div>
+    </section>
+
+    <section class="py-16 border-t border-gray-200 dark:border-gray-800 mb-10">
+        <div class="bg-gray-50 dark:bg-gray-800/50 rounded-3xl p-8 md:p-12 text-center border border-gray-200 dark:border-gray-700">
+            <h2 class="text-3xl font-bold tracking-tight text-[#18181B] dark:text-[#F4F4F5] mb-4">
+                Open-Source Workflows & Guides
+            </h2>
+            <p class="text-lg text-[#52525B] dark:text-[#A1A1AA] max-w-2xl mx-auto mb-8">
+                I am always tinkering with new systems to make life a little easier. Here is where I share my favorite open-source workflows, white papers, and side projects for you to use, completely free.
+            </p>
+            <a href="/guides" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-colors">
+                Explore the Guides
+            </a>
+        </div>
+    </section>
+
+</Layout>
+
+<!-- We pass the server-side search index securely to the client script -->
+<script is:inline define:vars={{ searchIndex }}>
+    // Greeting Logic
+    const hour = new Date().getHours();
+    const greetingElement = document.getElementById('dynamic-greeting');
+    if (greetingElement) {
+        if (hour < 12) greetingElement.innerText = "Good morning! Grab some coffee. ☕";
+        else if (hour < 18) greetingElement.innerText = "Good afternoon! ☀️";
+        else greetingElement.innerText = "Good evening! Time for a dog walk. 🐕";
+    }
+
+    // Strategic Concierge Search Logic
+    const searchInput = document.getElementById('global-search-input');
+    const resultsContainer = document.getElementById('search-results');
+
+    if (searchInput && resultsContainer) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            
+            // Hide dropdown if query is too short
+            if (query.length < 2) {
+                resultsContainer.classList.add('opacity-0', 'invisible');
+                return;
+            }
+
+            // Filter the index
+            const filtered = searchIndex.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.description.toLowerCase().includes(query) ||
+                item.category.toLowerCase().includes(query)
+            );
+
+            // Render Results
+            if (filtered.length > 0) {
+                resultsContainer.innerHTML = filtered.map(item => `
+                    <a href="${item.url}" class="block p-4 border-b last:border-b-0 border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                        <div class="text-xs font-bold text-blue-600 dark:text-blue-400 mb-1 uppercase tracking-wider">${item.category}</div>
+                        <div class="font-semibold text-[#18181B] dark:text-[#F4F4F5] mb-1">${item.title}</div>
+                        <div class="text-sm text-[#52525B] dark:text-[#A1A1AA] truncate">${item.description}</div>
+                    </a>
+                `).join('');
+            } else {
+                resultsContainer.innerHTML = `
+                    <div class="p-6 text-center text-[#52525B] dark:text-[#A1A1AA]">
+                        No frameworks or notes found for "<span class="font-semibold text-[#18181B] dark:text-[#F4F4F5]">${e.target.value}</span>".
+                    </div>
+                `;
+            }
+            
+            // Show dropdown
+            resultsContainer.classList.remove('opacity-0', 'invisible');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
+                resultsContainer.classList.add('opacity-0', 'invisible');
+            }
+        });
+    }
+</script>

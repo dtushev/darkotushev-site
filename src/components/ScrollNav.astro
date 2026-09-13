@@ -1,0 +1,32 @@
+---
+---
+<div id="scroll-nav" class="fixed bottom-6 right-6 flex flex-col gap-2 opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+    <button id="scroll-up" aria-label="Scroll to top" class="p-3 bg-white dark:bg-[#09090B] border border-gray-200 dark:border-gray-800 rounded-full shadow-lg hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-900 text-[#52525B] dark:text-[#A1A1AA] focus:outline-none transition-all pointer-events-auto group">
+        <svg class="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+    <button id="scroll-down" aria-label="Scroll to bottom" class="p-3 bg-white dark:bg-[#09090B] border border-gray-200 dark:border-gray-800 rounded-full shadow-lg hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-900 text-[#52525B] dark:text-[#A1A1AA] focus:outline-none transition-all pointer-events-auto group">
+        <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+</div>
+
+<script>
+    const scrollNav = document.getElementById('scroll-nav');
+    const scrollUpBtn = document.getElementById('scroll-up');
+    const scrollDownBtn = document.getElementById('scroll-down');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            scrollNav?.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+            scrollNav?.classList.add('opacity-0', 'pointer-events-none');
+        }
+    });
+
+    scrollUpBtn?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    scrollDownBtn?.addEventListener('click', () => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+</script>

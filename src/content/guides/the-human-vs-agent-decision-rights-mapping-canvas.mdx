@@ -1,0 +1,486 @@
+---
+title: The Human vs. Agent Decision Rights Mapping Canvas
+description: Auditing workflows, eliminating friction, and protecting human judgment
+---
+| **THE CENTRAL IDEA** | Generation is cheap. Judgment, taste, empathy, and accountability are not. The goal is not to automate the most work; it is to allocate authority deliberately so people and agents each do the work they are best equipped to do. |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+How to Use This Guide
+
+This guide is for product leaders, operations teams, experience designers, risk partners, and business owners who are moving from AI experiments to workflows that can actually take action. It is intentionally practical. You can read it front to back, or bring the worksheets into a working session and map one workflow at a time.
+
+| **A USEFUL DISTINCTION** | A chatbot produces an answer. An agent may retrieve records, choose a next step, call a system, alter a customer outcome, or trigger another workflow. As action increases, decision rights matter more. |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## What you will be able to do
+
+* Name the exact decision being delegated instead of vaguely “adding AI.”
+* Separate reversible execution from consequential judgment.
+* Choose an authority level that matches the real risk and uncertainty.
+* Design escalation seams that preserve context, dignity, and accountability.
+* Define controls, logs, review cadences, and success measures before launch.
+* Run a 90-day pilot without confusing speed with readiness.
+
+## The guide at a glance
+
+| **Part**        | **Purpose**                                               | **Primary output**  |
+| --------------- | --------------------------------------------------------- | ------------------- |
+| 1. Reframe      | Understand why automation without authority design fails. | Shared language     |
+| 2. Map          | Decompose the workflow and identify decisions.            | Workflow inventory  |
+| 3. Allocate     | Score risk and choose human/agent roles.                  | Decision-rights map |
+| 4. Design seams | Create handoffs, undo, and auditability.                  | Escalation contract |
+| 5. Govern       | Pilot, measure, review, and expand.                       | Operating cadence   |
+| 6. Apply        | Use canvases, prompts, and workshop exercises.            | Completed playbook  |
+
+## 1. Why Decision Rights Come Before Automation
+
+Inserting an autonomous agent into a dysfunctional process does not repair the process. It compresses the time between confusion and consequence. A task that once failed slowly may now fail instantly, repeatedly, and at scale. That is why the first design question is not “What can the model do?” It is “What authority should this system have in this specific context?”
+
+## The hidden decisions inside “simple” work
+
+Consider a customer asking where an order is. Retrieving tracking information is a data task. Deciding whether the delivery promise is still credible is an interpretation. Offering a refund is a financial action. Recognizing that the purchase is for a funeral or medical need is an empathy signal. The surface request is simple, but the workflow contains several decisions with different stakes.
+
+| **Workflow step** | **What looks mechanical** | **The hidden judgment**                                       |
+| ----------------- | ------------------------- | ------------------------------------------------------------- |
+| Retrieve status   | Read carrier event        | Which source is authoritative when events conflict?           |
+| Explain delay     | Summarize latest scan     | How much certainty should the message communicate?            |
+| Offer remedy      | Apply policy              | Is the standard remedy fair in this customer’s situation?     |
+| Escalate          | Open a case               | Does urgency, vulnerability, or emotion require a person now? |
+
+## Four failure patterns
+
+* Authority without accountability: the system acts, but no named owner is responsible for the outcome.
+* Human review as theater: a person clicks approve too quickly to exercise meaningful judgment.
+* Invisible seams: context disappears during escalation, forcing customers or employees to reconstruct the story.
+* Activity masquerading as value: more messages, drafts, or automated steps are counted as success even when outcomes do not improve.
+
+| **DESIGN PRINCIPLE** | Automate the preparation of judgment before automating the judgment itself. |
+| -------------------- | --------------------------------------------------------------------------- |
+
+## 2. The Four-Part Workflow Evaluation Grid
+
+Before assigning a task to an agent or a person, evaluate it from four angles. The grid prevents teams from making a decision based only on technical feasibility. A model may be capable of performing a task while the organization is not ready to delegate it.
+
+### 1. Risk profile
+
+Ask what happens when the output is wrong, late, biased, disclosed to the wrong person, or acted on without correction. Consider harm to customers and employees, legal exposure, financial impact, brand trust, operational continuity, and the difficulty of repair.
+
+### 2. Systems and seams
+
+Map every boundary: model to tool, tool to system of record, agent to employee, brand to third party, and digital channel to store or call center. Seams are where identity, intent, evidence, and ownership often leak.
+
+### 3. Business outcome
+
+State the outcome in human terms. “Reduce handle time” is incomplete. Better outcomes include resolving straightforward needs faster while improving first-contact resolution, reducing repeat explanations, or giving specialists more time for sensitive cases.
+
+### 4. Judgment versus execution
+
+Execution follows a known method. Judgment weighs ambiguity, trade-offs, norms, exceptions, or human impact. Many workflows contain both. The best design often lets the agent gather, compare, draft, and flag while a person decides, communicates, or accepts accountability.
+
+| **Criterion** | **Low-complexity signal** | **High-complexity signal**            |
+| ------------- | ------------------------- | ------------------------------------- |
+| Risk          | Small, reversible effect  | Material or hard-to-repair harm       |
+| Seams         | One trusted system        | Multiple systems or organizations     |
+| Outcome       | Clear and measurable      | Competing goals or diffuse benefit    |
+| Judgment      | Stable rule and evidence  | Ambiguity, values, empathy, exception |
+
+## 3. The Five Levels of Agent Authority
+
+Binary labels such as “automated” and “human-in-the-loop” are too crude. Teams need a ladder that makes the scope of delegation visible. Assign the lowest authority level that can deliver the intended benefit, then earn expansion through evidence.
+
+| **Level**            | **Agent may…**                            | **Human responsibility**            | **Example**                              |
+| -------------------- | ----------------------------------------- | ----------------------------------- | ---------------------------------------- |
+| 0. Observe           | Monitor and log; take no action.          | Interpret evidence and act.         | Detect recurring return reasons.         |
+| 1. Assist            | Retrieve, summarize, draft, or recommend. | Review and perform the action.      | Draft a customer response.               |
+| 2. Act with approval | Prepare a bounded action and wait.        | Approve, edit, or reject.           | Propose a goodwill credit.               |
+| 3. Act, then notify  | Execute reversible actions inside rules.  | Monitor exceptions and undo.        | Reschedule a standard delivery.          |
+| 4. Bounded autonomy  | Plan and execute within explicit limits.  | Own policy, controls, and outcomes. | Resolve low-value standard claims.       |
+| 5. Prohibited        | No agent action is permitted.             | Human-only decision and execution.  | Sensitive employment or safety judgment. |
+
+## What “bounded” must specify
+
+* Scope: which customers, products, regions, channels, and workflow states are included.
+* Tools: exactly which systems and actions are available.
+* Thresholds: monetary, volume, confidence, sentiment, and time limits.
+* Evidence: sources that must be present and sources that may never be used.
+* Stop conditions: uncertainty, contradiction, vulnerability, policy conflict, or repeated failure.
+* Recovery: undo window, rollback owner, and customer remedy.
+
+| **COMMON MISTAKE** | A confidence score is not a moral permission slip. High model confidence does not make a high-impact action appropriate for autonomous execution. |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## 4. A Practical Risk-and-Readiness Score
+
+A score does not replace judgment; it creates a disciplined conversation. Rate each dimension from 1 (low) to 5 (high). Document the evidence behind the number. When reviewers disagree, capture the disagreement instead of averaging it away too quickly.
+
+| **Dimension**    | **1 — Low**               | **3 — Moderate**                   | **5 — High**                              |
+| ---------------- | ------------------------- | ---------------------------------- | ----------------------------------------- |
+| Impact           | Minor inconvenience       | Noticeable customer or cost effect | Safety, rights, livelihood, or major loss |
+| Reversibility    | Instant undo              | Repair requires work               | Irreversible or lasting effect            |
+| Ambiguity        | Stable rule               | Some exceptions                    | Values, empathy, or novel context         |
+| Data sensitivity | Public or non-sensitive   | Customer operational data          | Health, identity, finance, employment     |
+| Detectability    | Error obvious immediately | Detected through monitoring        | Harm may remain hidden                    |
+| Frequency/scale  | Rare and contained        | Regular workflow                   | High-volume repeated action               |
+
+## Interpretation bands
+
+| **Total** | **Default posture**                         | **Required design response**                          |
+| --------- | ------------------------------------------- | ----------------------------------------------------- |
+| *6-10*    | Assist or bounded action may be reasonable. | Standard logging, tests, and rollback.                |
+| *11-18*   | Approval or narrow autonomy.                | Named owner, thresholds, sampling, escalation drills. |
+| *19-24*   | Human decision; agent prepares evidence.    | Independent review and strong access controls.        |
+| *25-30*   | Human-only or redesign the task.            | Do not delegate without material risk reduction.      |
+
+## Readiness can constrain authority further
+
+Even a low-risk task should remain at Level 1 if the knowledge base is stale, system identities do not match, no one owns exception queues, or rollback is untested. Risk describes the consequence. Readiness describes your ability to control it. Use the more conservative answer.
+
+## 5. Map the Workflow Before You Map the Technology
+
+Teams often draw the happy path and call it a workflow. Decision-rights mapping begins with reality: triggers, inputs, policies, decisions, actions, exceptions, handoffs, and closure. Interview the people who perform the work, because the documented procedure rarely contains every workaround or judgment call.
+
+## The seven-step decomposition method
+
+1\. Name one customer or business outcome. Avoid broad labels such as “support automation.”
+
+2\. Identify the trigger and the person or system that initiates the work.
+
+3\. List required evidence and mark the system of record for each item.
+
+4\. Separate transformations from decisions. “Summarize” is different from “choose.”
+
+5\. List every action that changes money, access, inventory, communication, status, or a person’s options.
+
+6\. Capture exceptions, informal workarounds, and emotional or vulnerability signals.
+
+7\. Define what “done” means, who verifies it, and how the outcome becomes learning.
+
+## A mapping example: damaged-item claim
+
+| **Step**                | **Type**    | **Proposed role**         | **Why**                         |
+| ----------------------- | ----------- | ------------------------- | ------------------------------- |
+| Collect order and image | Retrieval   | Agent                     | Structured, low discretion.     |
+| Assess image quality    | Validation  | Agent + retry             | Reversible and easy to explain. |
+| Determine likely damage | Inference   | Agent recommends          | Uncertainty remains.            |
+| Choose remedy           | Decision    | Human or bounded policy   | Financial and customer impact.  |
+| Communicate empathy     | Interaction | Human for sensitive cases | Tone depends on context.        |
+| Update inventory signal | Action      | Agent after validation    | Useful feedback loop.           |
+
+## 6. The Decision Rights Allocation Matrix
+
+The original canvas becomes useful when each category is translated into explicit permissions and escalation triggers. Replace generic phrases such as “AI helps” with verbs: may read, may draft, may recommend, may write, may refund, may cancel, may publish.
+
+| **Workflow category**          | **Agent role**                                                         | **Human role**                                             | **Escalation trigger**                                                       |
+| ------------------------------ | ---------------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Data aggregation and synthesis | Collect, reconcile, format, cite, and flag gaps.                       | Validate context; choose implications and focus.           | Contradiction, missing source, freshness failure, low confidence.            |
+| Initial customer inquiries     | Answer standard questions; retrieve status; offer approved next steps. | Handle exceptions, sensitive complaints, and novel needs.  | Negative sentiment, repeat contact, vulnerability, refund or legal language. |
+| Content and document drafting  | Create outline, first draft, variants, and structured summary.         | Supply point of view, voice, evidence, and final approval. | Public claim, executive commitment, policy, crisis, or regulated content.    |
+| Operational approvals          | Check rules, compile evidence, and flag anomalies.                     | Retain sign-off and accountability.                        | Any impact above threshold or policy conflict.                               |
+| Merchandising recommendation   | Rank options against declared constraints.                             | Set brand intent, exclusions, and fairness rules.          | Low evidence, sensitive inference, restricted item, or customer distress.    |
+| Incident response              | Summarize signals and suggest runbook steps.                           | Command response and authorize consequential actions.      | Security, safety, material outage, or uncertain containment.                 |
+
+ 
+
+## Write permissions as contracts
+
+A strong permission statement names the actor, action, object, conditions, limits, evidence, notification, and recovery. Example: “The delivery agent may issue one reshipment for a domestic order below $75 when carrier data confirms loss, inventory is available, the address passes validation, and the customer has not received a prior remedy. It must notify the customer, log the evidence, and allow a specialist to reverse the action for 24 hours.”
+
+## 7. Designing Safe Human–Agent Seams
+
+A seam is the moment work changes hands. Most customer frustration blamed on “the bot” is actually seam failure: lost context, unclear ownership, delayed routing, or a human who receives a transcript but not a usable summary. Design the handoff as a product experience, not as an error state.
+
+### Rule 1 - Never make the person repeat themselves
+
+Pass a concise case brief: intent, actions already attempted, confirmed facts, unresolved questions, relevant order or account identifiers, customer preferences, sentiment, urgency, and the reason for escalation. Give the person a chance to correct the summary.
+
+### Rule 2 - Provide an instant undo
+
+Reversibility changes the risk profile of automation. Define what can be reversed, for how long, by whom, and what happens downstream. A cancelled order may be easy to restore before fulfillment allocation and impossible afterward. “Undo” must reflect operational truth.
+
+### Rule 3 - Log activity transparently
+
+Record the data used, policy version, tools called, action taken, confidence or uncertainty, approvals, notifications, and outcome. Logs should help an operator reconstruct the event without exposing hidden reasoning or unnecessary personal data.
+
+## The minimum handoff packet
+
+| **Field**         | **Question it answers**                       |
+| ----------------- | --------------------------------------------- |
+| Intent            | What is the person trying to accomplish?      |
+| State             | Where is the workflow now?                    |
+| Evidence          | What facts and sources are confirmed?         |
+| Actions           | What has already happened?                    |
+| Emotion / urgency | What human context should shape the response? |
+| Open decision     | What specifically must the human decide?      |
+| Ownership         | Who is responsible, and by when?              |
+
+## 8. Four Worked Examples
+
+### A. Customer service: delayed shipment
+
+The agent retrieves carrier events, compares the promise date with the current estimate, and drafts a clear explanation. It may autonomously offer a no-cost shipping upgrade on a replacement below a defined threshold. It escalates when the item is time-sensitive, the customer has contacted the company twice, carrier signals conflict, or the remedy exceeds policy.
+
+### B. Marketing: campaign copy
+
+The agent generates variants using approved product facts and a brand voice guide. A marketer remains accountable for claims, cultural sensitivity, audience fit, and final publication. Escalation is mandatory for health or sustainability claims, crisis communications, comparative claims, or content involving children.
+
+### C. Operations: inventory exception
+
+The agent detects a mismatch, assembles transaction history, and recommends a reconciliation path. It may correct a low-value, clearly attributable system duplicate if rollback is available. A planner approves transfers or adjustments that could create customer cancellations, distort financial reporting, or move constrained inventory.
+
+### D. People workflow: candidate screening
+
+The safest allocation is deliberately narrow. The agent may schedule interviews, summarize candidate-provided materials, and check completion of required fields. Humans define job-related criteria, review evidence, decide advancement, and remain accountable. Sensitive attributes, inferred personality, or opaque fit scores should not become autonomous decision inputs.
+
+| **Example** | **Useful automation**                   | **Reserved judgment**                 |
+| ----------- | --------------------------------------- | ------------------------------------- |
+| Shipment    | Status synthesis and bounded remedy     | Fairness in exceptional circumstances |
+| Campaign    | Drafting and consistency checks         | Claims, taste, cultural context       |
+| Inventory   | Detection and evidence assembly         | Material allocation trade-offs        |
+| Hiring      | Administration and structured summaries | Opportunity and employment decisions  |
+
+## 9. Controls That Make Delegation Real
+
+A policy document does not control a system by itself. Controls must exist in the workflow, tool permissions, data access, monitoring, and team habits. Design controls at three moments: before action, during action, and after action.
+
+### Preventive controls
+
+* Least-privilege tool access and separate permissions for reading versus writing.
+* Approved data sources, freshness requirements, and field-level restrictions.
+* Hard transaction limits, product exclusions, geographic boundaries, and policy constraints.
+* Test suites covering normal cases, boundary conditions, prompt injection, and unavailable systems.
+
+### Detective controls
+
+* Real-time alerts for threshold breaches, unusual volume, repeated retries, or contradiction.
+* Outcome monitoring segmented by customer group, channel, region, and workflow type.
+* Sampled human review that includes successful cases, not only escalations.
+* Customer- and employee-visible routes to report a problem or request a person.
+
+### Corrective controls
+
+* ·   Kill switch, graceful fallback, and tested rollback.
+* ·   Clear incident ownership and service-level targets for exception queues.
+* ·   Customer remedy guidelines when automation causes harm or wasted time.
+* ·   Root-cause review that updates policy, data, tools, prompts, tests, and training.
+
+| **OPERATIONAL TRUTH** | If the on-call team cannot explain how to stop the agent, restore the prior state, and identify affected people, the workflow is not ready for autonomous action. |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## 10. Governance Without Bureaucratic Paralysis
+
+Good governance should make responsible action faster by establishing reusable rules before every team faces the same questions. The goal is not a central committee approving every prompt. It is a clear operating model with named owners, risk tiers, standard evidence, and a reliable route for exceptions.
+
+| **Role**                       | **Accountability**                                                                 |
+| ------------------------------ | ---------------------------------------------------------------------------------- |
+| Business outcome owner         | Owns value, customer impact, policy intent, and final acceptance of residual risk. |
+| Workflow owner                 | Maintains the end-to-end process, handoffs, service levels, and exception queue.   |
+| Product / experience lead      | Designs interaction, consent, explanation, human access, and recovery.             |
+| Technical owner                | Controls architecture, identity, tool access, testing, monitoring, and rollback.   |
+| Risk / legal / privacy partner | Interprets obligations and challenges controls for relevant risk domains.          |
+| Frontline representative       | Brings real exceptions, customer language, and operational constraints.            |
+| Independent reviewer           | Periodically tests whether evidence supports continued authority.                  |
+
+## A lightweight review cadence
+
+* Weekly during pilot: incidents, escalations, false positives, overrides, and operator feedback.
+* Monthly after stabilization: outcome quality, drift, subgroup differences, control performance, and policy changes.
+* Quarterly: reauthorize authority level, expand narrowly, reduce authority, or retire the workflow.
+* Event-driven: review immediately after a major model, data, tool, policy, or market change.
+
+NIST’s AI Risk Management Framework organizes work around Govern, Map, Measure, and Manage. This guide translates that logic into workflow-level decision rights: establish accountability, understand context, test and monitor risk, then manage authority over time.
+
+## 11. Measure Outcomes, Not Automated Activity
+
+Counts of generated messages or completed agent steps say little about whether the workflow is better. Use a balanced scorecard that combines customer value, quality, human work, risk, and learning. Always compare against a meaningful baseline.
+
+| **Dimension**  | **Example measures**                                                                 | **What to watch**                                  |
+| -------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------- |
+| Customer value | Resolution rate, time to resolution, effort, repeat contact, satisfaction.           | A faster interaction may simply defer the problem. |
+| Quality        | Factual accuracy, policy adherence, appropriateness, completeness.                   | Average scores can hide severe tail failures.      |
+| Human work     | Review time, exception burden, cognitive load, override rate.                        | Human effort may move rather than disappear.       |
+| Risk           | Unauthorized actions, rollback rate, complaints, privacy events, subgroup disparity. | Low-frequency harms still matter.                  |
+| Business       | Cost per resolved outcome, conversion, retention, inventory or revenue effect.       | Do not optimize money at the expense of trust.     |
+| Learning       | Recurring uncertainty, new exceptions, knowledge gaps, policy ambiguity.             | A mature system should improve its environment.    |
+
+ 
+
+## The escalation rate is not inherently bad
+
+A high escalation rate may indicate weak automation, but it may also show that the system correctly recognizes uncertainty. Track appropriate escalation: the percentage of cases where escalation matched policy and expert judgment. Also track missed escalation, unnecessary escalation, and time to human ownership.
+
+## Ask one counterfactual question
+
+| **EVALUATION PROMPT** | Compared with the prior workflow, who is better off, who carries new burden, what new failure is possible, and how quickly would we know? |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+
+## 12. A 90-Day Implementation Roadmap
+
+| **Period** | **Focus**              | **Key activities**                                                                                                     | **Exit evidence**                                                      |
+| ---------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Days 1–30  | Map and bound          | Select one workflow; interview operators; decompose steps; score risk; define Level 1 permissions; establish baseline. | Signed workflow map, owner list, risk record, test cases.              |
+| Days 31–60 | Pilot with supervision | Run in shadow or assist mode; validate sources; test seams and rollback; train reviewers; capture exceptions.          | Quality threshold met, escalation packet works, rollback drill passed. |
+| Days 61–90 | Earn limited authority | Enable bounded actions for a narrow population; monitor daily; sample outcomes; hold reauthorization review.           | Evidence supports continue, expand, reduce, or stop decision.          |
+
+ 
+
+## Pilot selection criteria
+
+* High enough volume to learn, but small enough to contain.
+* Clear outcome and stable policy.
+* Mostly reversible actions with observable results.
+* Reliable systems of record and identifiable data owners.
+* An engaged frontline team and a named exception owner.
+* Meaningful benefit even at Assist or Approval authority levels.
+
+## Red flags that should delay launch
+
+* The team cannot agree what source is authoritative.
+* No one owns decisions after escalation.
+* Success is defined only as labor reduction.
+* The human reviewer lacks time, training, or authority to disagree.
+* Rollback depends on manual heroics that have not been tested.
+* The workflow affects sensitive rights or safety without specialist review.
+
+## 13. The Decision Rights Workshop
+
+Run this as a 90-minute working session with the business owner, frontline operator, product or process lead, technical owner, and relevant risk partner. Bring one real case, one failure case, and current policy documentation.
+
+| **Time**  | **Activity**                                            | **Output**            |
+| --------- | ------------------------------------------------------- | --------------------- |
+| 0–10 min  | Frame the outcome and the customer or employee promise. | One outcome statement |
+| 10–25 min | Walk the real workflow, including workarounds.          | Current-state map     |
+| 25–40 min | Circle every decision and consequential action.         | Decision inventory    |
+| 40–55 min | Score risk and readiness; note disagreements.           | Risk record           |
+| 55–70 min | Assign authority level and escalation triggers.         | Draft allocation map  |
+| 70–82 min | Design the handoff packet, undo, and logs.              | Seam contract         |
+| 82–90 min | Name owners, measures, and the next test.               | Pilot commitment      |
+
+## Facilitator questions
+
+·   What decision is hiding inside this task?
+
+·   What would a careful expert notice that a rule might miss?
+
+·   What happens to the person when the action is wrong?
+
+·   Can we reduce risk by changing the workflow rather than adding review?
+
+·   What evidence would persuade us to increase authority?
+
+·   What evidence would require us to reduce or remove authority?
+
+| **WORKSHOP DISCIPLINE** | Do not leave with “human in the loop” as the answer. Name the human role, the exact decision, the information they receive, the time available, and the authority they possess. |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## 14. Printable Decision Rights Canvas
+
+Complete one canvas for each consequential decision—not one for an entire broad workflow.
+
+| **Canvas field**            | **Your working answer** |
+| --------------------------- | ----------------------- |
+| Outcome and user            |                         |
+| Trigger                     |                         |
+| Decision or action          |                         |
+| Required evidence / sources |                         |
+| Risk score and rationale    |                         |
+| Authority level (0–5)       |                         |
+| Agent may / may not         |                         |
+| Human role and owner        |                         |
+| Escalation triggers         |                         |
+| Undo / recovery             |                         |
+| Audit record                |                         |
+| Measures and review date    |                         |
+
+## 15. Printable Escalation Seam Contract
+
+| **Design question**              | **Definition**                                                                    |
+| -------------------------------- | --------------------------------------------------------------------------------- |
+| When does escalation begin?      | Signal, threshold, uncertainty, sentiment, repeated failure, or explicit request. |
+| Where does it route?             | Named queue, role, channel, priority, and service-level target.                   |
+| What context travels?            | Intent, confirmed facts, sources, actions, emotion, urgency, open decision.       |
+| What can the human do?           | Decision authority, policy exceptions, remedies, and system access.               |
+| What does the user see?          | Clear acknowledgement, expected timing, continuity, and choice.                   |
+| What happens if no one responds? | Fallback owner, timeout path, and protective action.                              |
+| How is closure confirmed?        | Outcome, notification, record update, and learning signal.                        |
+
+ 
+
+## Handoff summary template
+
+| **CASE BRIEF** | The customer is trying to \[intent]. We confirmed \[facts] from \[sources]. The agent already \[actions]. The unresolved decision is \[decision]. Escalation occurred because \[trigger]. The customer’s urgency or emotional context is \[context]. A human owner should \[next action] by \[time]. |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## Pre-launch seam test
+
+* Trigger escalation from a normal conversation, an angry conversation, and a low-confidence data state.
+* Verify the human sees the summary and original evidence without searching multiple systems.
+* Confirm the user receives a realistic expectation and does not need to restart.
+* Test timeout, reassignment, undo, and after-hours behavior.
+* Ask a frontline operator whether the packet supports a real decision, not merely a faster greeting.
+
+## 16. Prompt and Review Kit for Practitioners
+
+## Workflow decomposition prompt
+
+| **COPY AND ADAPT** | Analyze the workflow below. Separate triggers, inputs, transformations, decisions, actions, exceptions, handoffs, and closure. For every decision, identify uncertainty, possible harm, reversibility, required evidence, and the accountable owner. Do not recommend autonomy until the workflow is mapped. |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+ 
+
+## Adversarial review prompt
+
+| **COPY AND ADAPT** | Challenge this proposed allocation of human and agent responsibilities. Give me five realistic failure cases, including one involving conflicting systems, one involving a vulnerable person, one involving a policy edge case, one involving misuse, and one involving a silent data-quality failure. Recommend narrower permissions and specific escalation triggers. |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+ 
+
+## Reauthorization prompt
+
+| **COPY AND ADAPT** | Using the pilot results below, assess whether the workflow should keep, increase, reduce, or lose its current authority level. Distinguish model quality from workflow readiness. Examine outcome quality, tail failures, missed escalations, unnecessary escalations, operator burden, subgroup differences, rollback use, and unresolved incidents. |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+ 
+
+## Questions a reviewer should answer
+
+* Is the recommendation supported by cited, current, authoritative evidence?
+* Does it distinguish facts, inference, uncertainty, and policy?
+* Is the proposed action within scope and below every threshold?
+* Could protected, sensitive, or irrelevant information have influenced the result?
+* Would a reasonable person understand and be able to challenge the outcome?
+* If approved, who remains accountable?
+
+## 17. The Operating Principle: Protect Judgment, Expand Agency
+
+The most mature organizations will not be the ones that automate every visible task. They will be the ones that understand where agency creates freedom and where judgment protects people. They will let machines carry the mechanical burden—retrieving, reconciling, drafting, checking, and monitoring, while preserving meaningful human authority for ambiguity, empathy, taste, values, and accountability.
+
+Decision rights are not a one-time compliance exercise. They are a living design system. As policies change, data improves, models evolve, and teams learn from real cases, authority should be re-earned. A workflow may move from Assist to bounded action, or back again. That is responsible adaptation, not failure.
+
+| **FINAL TAKEAWAY** | Do not ask only whether an agent can complete the task. Ask whether the organization can explain the decision, contain the error, restore the person’s options, and remain accountable for the outcome. |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+ 
+
+## A final checklist
+
+* The outcome is clear and human-centered.
+* Every consequential decision and action is named.
+* Authority is bounded by scope, tools, evidence, and thresholds.
+* A real person owns exceptions and outcomes.
+* Escalation preserves context and gives the human usable authority.
+* Undo, logging, monitoring, and incident response have been tested.
+* Measures include quality, burden, risk, and learning, not only speed or cost.
+* A date and evidence standard for reauthorization are recorded.
+
+## Sources and further reading
+
+National Institute of Standards and Technology. Artificial Intelligence Risk Management Framework (AI RMF 1.0), 2023; and Generative Artificial Intelligence Profile (NIST AI 600-1), 2024. NIST frames AI risk work through Govern, Map, Measure, and Manage.
+
+Organisation for Economic Co-operation and Development. OECD AI Principles, updated 2024: human-centered values, transparency and explainability, robustness, security and safety, and accountability.
+
+European Union. Regulation (EU) 2024/1689 (Artificial Intelligence Act), including risk-management and human-oversight requirements for relevant high-risk systems. Applicability depends on context; seek qualified counsel.
+
+Note: This field guide is an operating and design resource, not legal advice. Adapt examples to your policies, risk tolerance, architecture, and obligations.\
+\
+Love, \
+Darko&#x20;

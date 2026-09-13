@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+// We now use guide.id to generate the URL path
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map(guide => ({
+    params: { slug: guide.id },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+// We now use the standalone render() function
+const { Content } = await render(guide);
+---
+
+<Layout title={`${guide.data.title} | Darko Tushev`} description={guide.data.description}>
+    <article class="py-16 md:py-20 max-w-3xl mx-auto px-4 sm:px-6">
+        <a href="/guides" class="text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 mb-8 inline-block">
+            &larr; Back to all Guides
+        </a>
+        
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#18181B] dark:text-[#F4F4F5] mb-6">
+            {guide.data.title}
+        </h1>
+        
+        <p class="text-xl text-[#52525B] dark:text-[#A1A1AA] leading-relaxed mb-12 pb-8 border-b border-gray-200 dark:border-gray-800">
+            {guide.data.description}
+        </p>
+        
+        <div class="prose dark:prose-invert prose-lg max-w-none prose-img:rounded-xl">
+            <Content />
+        </div>
+    </article>
+</Layout>
