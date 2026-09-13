@@ -2,21 +2,30 @@
 import ThemeToggle from './ThemeToggle.astro';
 ---
 
-<header class="w-full max-w-4xl mx-auto px-6 py-8 flex items-center justify-between">
-    <a href="/" class="text-xl font-bold tracking-tight text-[#18181B] dark:text-[#F4F4F5] hover:opacity-80 transition-opacity">
+<header class="w-full max-w-4xl mx-auto px-4 md:px-6 py-6 md:py-8 flex items-center justify-between">
+    <!-- Logo (Pinned left with forced right margin) -->
+    <a href="/" class="text-xl font-bold tracking-tight text-[#18181B] dark:text-[#F4F4F5] hover:opacity-80 transition-opacity shrink-0 mr-6">
         Darko.
     </a>
-    <nav class="flex items-center gap-5 md:gap-6 text-sm font-medium text-[#52525B] dark:text-[#A1A1AA]">
-        <a href="/articles" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Articles</a>
-        <a href="/guides" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Guides</a>
-        <a href="/library" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Library</a>
-        <a href="/about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
-        <a href="/contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+    
+    <!-- Navigation & Toggle Container -->
+    <div class="flex items-center gap-3 md:gap-6 overflow-hidden">
+        
+        <!-- Swipeable Links -->
+        <nav class="flex items-center gap-4 md:gap-6 text-sm font-medium text-[#52525B] dark:text-[#A1A1AA] overflow-x-auto whitespace-nowrap pb-1" style="scrollbar-width: none;">
+            <a href="/articles" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Articles</a>
+            <a href="/guides" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Guides</a>
+            <a href="/library" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Library</a>
+            <a href="/about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+            <a href="/contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+        </nav>
         
         <!-- Subtle divider line -->
-        <div class="w-px h-4 bg-gray-300 dark:bg-gray-700 mx-1 hidden sm:block"></div>
+        <div class="w-px h-4 bg-gray-300 dark:bg-gray-700 hidden sm:block shrink-0"></div>
         
-        <!-- The Toggle Component -->
-        <ThemeToggle />
-    </nav>
+        <!-- The Toggle Component (Pinned right) -->
+        <div class="shrink-0 pl-2">
+            <ThemeToggle />
+        </div>
+    </div>
 </header>
