@@ -5,38 +5,103 @@ import Header from '../components/Header.astro';
 import ScrollNav from '../components/ScrollNav.astro';
 
 // This allows each page to pass in its own unique title and description for SEO!
-const { title = "Darko Tushev", description = "Enterprise AI & Agentic Commerce" } = Astro.props;
+const {
+    title = "Darko Tushev",
+    description = "Enterprise AI & Agentic Commerce"
+} = Astro.props;
+
+// Structured data for search engines
+const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Person",
+            "@id": "https://darkotushev.com/#person",
+            "name": "Darko Tushev",
+            "url": "https://darkotushev.com/",
+            "sameAs": [
+                "https://www.linkedin.com/in/darkotushev/"
+            ],
+            "jobTitle": "Senior AI Strategy Manager",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Gap Inc.",
+                "url": "https://www.gapinc.com/"
+            },
+            "description": "AI strategy and product leader focused on the customer journey, Agentic Commerce, Agentic Experiences, and digital transformation.",
+            "knowsAbout": [
+                "AI Strategy",
+                "Product Strategy",
+                "Artificial Intelligence",
+                "Generative AI",
+                "Agentic AI",
+                "Agentic Commerce",
+                "Customer Journey",
+                "Customer Experience",
+                "Digital Transformation",
+                "Retail",
+                "E-Commerce"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://darkotushev.com/#website",
+            "url": "https://darkotushev.com/",
+            "name": "Darko Tushev",
+            "publisher": {
+                "@id": "https://darkotushev.com/#person"
+            }
+        }
+    ]
+};
 ---
+
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
+
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        
+
         <!-- SEO & Meta Tags -->
         <title>{title}</title>
         <meta name="description" content={description} />
-        
+
         <!-- OpenGraph / Social Media Preview Tags -->
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url.href} />
+
+        <!-- Structured Data for Google -->
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify(structuredData)}
+        ></script>
 
         <!-- Premium Typography (Inter) -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- Dark Mode Memory Engine -->
         <script is:inline>
             const theme = (() => {
-                if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                if (
+                    typeof localStorage !== 'undefined' &&
+                    localStorage.getItem('theme')
+                ) {
                     return localStorage.getItem('theme');
                 }
+
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     return 'dark';
                 }
+
                 return 'light';
             })();
 
@@ -45,62 +110,84 @@ const { title = "Darko Tushev", description = "Enterprise AI & Agentic Commerce"
             } else {
                 document.documentElement.classList.add('dark');
             }
+
             window.localStorage.setItem('theme', theme);
         </script>
     </head>
-    
-    <!-- We set the background colors and text colors globally here on the body -->
-    <body class="bg-[#FAFAFA] dark:bg-[#09090B] text-[#18181B] dark:text-[#F4F4F5] transition-colors duration-300 min-h-screen flex flex-col">
-        
+
+    <body
+        class="bg-[#FAFAFA] dark:bg-[#09090B] text-[#18181B] dark:text-[#F4F4F5] transition-colors duration-300 min-h-screen flex flex-col"
+    >
         <!-- SKIP TO CONTENT LINK (Accessibility & GEO Optimization) -->
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white font-medium px-5 py-3 rounded-xl z-[100] shadow-lg outline-none ring-2 ring-blue-400">
+        <a
+            href="#main-content"
+            class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white font-medium px-5 py-3 rounded-xl z-[100] shadow-lg outline-none ring-2 ring-blue-400"
+        >
             Skip to main content
         </a>
 
         <!-- THE "GLASS HALF FULL" SCROLL PROGRESS BAR -->
-        <div class="fixed top-0 left-0 w-full h-1.5 z-50 bg-gray-200/50 dark:bg-gray-800/50 backdrop-blur-md pointer-events-none">
-            <div id="glass-scroll-bar" class="h-full w-0 bg-gradient-to-r from-blue-300 via-blue-500 to-cyan-400 shadow-[0_0_10px_rgba(56,189,248,0.7)] rounded-r-full transition-all duration-150 ease-out"></div>
+        <div
+            class="fixed top-0 left-0 w-full h-1.5 z-50 bg-gray-200/50 dark:bg-gray-800/50 backdrop-blur-md pointer-events-none"
+        >
+            <div
+                id="glass-scroll-bar"
+                class="h-full w-0 bg-gradient-to-r from-blue-300 via-blue-500 to-cyan-400 shadow-[0_0_10px_rgba(56,189,248,0.7)] rounded-r-full transition-all duration-150 ease-out"
+            ></div>
         </div>
 
-        <!-- Our New Header Component -->
+        <!-- Header -->
         <Header />
 
-        <!-- The <slot /> is where your page content gets injected -->
-        <main id="main-content" class="flex-grow max-w-4xl mx-auto w-full px-6 py-12">
+        <!-- Page content -->
+        <main
+            id="main-content"
+            class="flex-grow max-w-4xl mx-auto w-full px-6 py-12"
+        >
             <slot />
         </main>
 
         <style is:global>
-            /* Completely hide the clunky default browser scrollbar */
+            /* Completely hide the default browser scrollbar */
             ::-webkit-scrollbar {
                 display: none;
             }
+
             html {
-                scrollbar-width: none; /* For Firefox */
-                -ms-overflow-style: none;  /* For Internet Explorer/Edge */
-                scroll-behavior: smooth; /* Makes the skip link jump gracefully */
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                scroll-behavior: smooth;
             }
         </style>
 
         <script>
-            // The physics engine: calculates scroll depth and fills the "glass"
+            // Calculates scroll depth and fills the progress bar
             window.addEventListener('scroll', () => {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                
-                // Calculate percentage, capping it at 100% just in case
-                const scrolled = Math.min((winScroll / height) * 100, 100);
-                
-                const scrollBar = document.getElementById('glass-scroll-bar');
+                const winScroll =
+                    document.body.scrollTop ||
+                    document.documentElement.scrollTop;
+
+                const height =
+                    document.documentElement.scrollHeight -
+                    document.documentElement.clientHeight;
+
+                const scrolled =
+                    height > 0
+                        ? Math.min((winScroll / height) * 100, 100)
+                        : 0;
+
+                const scrollBar =
+                    document.getElementById('glass-scroll-bar');
+
                 if (scrollBar) {
                     scrollBar.style.width = scrolled + '%';
                 }
             });
         </script>
-        
-        <Footer/>
-        
-        <!-- Our New Global Scroll Navigation Widget -->
+
+        <Footer />
+
+        <!-- Global Scroll Navigation Widget -->
         <ScrollNav />
     </body>
 </html>
